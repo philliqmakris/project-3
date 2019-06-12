@@ -15,6 +15,13 @@ body {
     -webkit-font-smoothing: antialiased;
   }
 
+  a {
+    text-decoration: none;
+    color: white;
+    cursor: hand;
+}
+
+
   .logo {
     font-size: 55px;
     padding-top: 35px;
