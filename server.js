@@ -11,9 +11,6 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/project3", { useNewUrlParser: true });
-
 // Define API routes here
 
 // Send every other request to the React app
