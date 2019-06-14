@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Modal from '../../components/Modal';
 
 class Main extends Component{
 
@@ -9,6 +10,7 @@ class Main extends Component{
     render(){
         return (
             <div>
+                <Modal />
                 {/* Main page components go here */}
             </div>
         )
