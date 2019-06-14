@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Navbar from '../../components/Navbar';
 
 class Main extends Component{
 
@@ -10,7 +11,7 @@ class Main extends Component{
         return (
             <div>
                 {/* Main page components go here */}
-                <h1>test</h1>
+                <Navbar />
             </div>
         )
     }
