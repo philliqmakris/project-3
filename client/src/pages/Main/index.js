@@ -15,10 +15,10 @@ class Main extends Component{
                 <div class="black">
 
         <div class="container" id="welcomeTable">
-            <p class="welcome">Welcome to UO OurSite! OurSite is a student designed meeting space for bootcampers to
+            <p class="welcome">Welcome to Campsite! Campsite is a student designed meeting space for bootcampers to
                 interact and collaborate</p>
             <hr />>
-            <p class="welcome">Oursite offers mutiple ways for students to keep in touch, utilizing the chat feature as
+            <p class="welcome">Campsite offers mutiple ways for students to keep in touch, utilizing the chat feature as
                 well as audio and video conferencing.</p>
         </div>
     </div>
@@ -29,7 +29,6 @@ class Main extends Component{
         <br />
         <div class="row">
             <div class="col-md-8">
-
                 <h2><u>Intructor</u>: <a class="todd" href="https://www.linkedin.com/in/tbehunin/" rel="noopener noreferrer" target="_blank">Todd
                         Behunin</a></h2>
             </div>

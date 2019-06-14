@@ -7,7 +7,7 @@ function Banner() {
     <div className="col-md-4">
         <img className="duck"
             src="https://commencement.uoregon.edu/sites/commencement2.uoregon.edu/files/guidebook-beaduck.png" alt="banner" />
-        <h1 className="logo">UO OurSite</h1>
+        <h1 className="logo">Campsite</h1>
     </div>
       
     <div className="col-md-8">
