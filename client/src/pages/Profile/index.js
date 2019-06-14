@@ -9,7 +9,7 @@ class Main extends Component{
     render(){
         return (
             <div>
-                {/* Main page components go here */}
+                {/* Profile page components go here */}
             </div>
         )
     }
