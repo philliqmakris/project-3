@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css';
 import Main from './pages/Main';
+import Register from './pages/Register';
 import Navbar from './components/Navbar';
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
         <Route exact path="/" component={Main} />
         <Route exact path="/Profiles" component={Main} />
         <Route exact path="/Login" component={Main} />
-        <Route exact path="/Register" component={Main} />
+        <Route exact path="/Register" component={Register} />
       </div>
     </Router>
   );
