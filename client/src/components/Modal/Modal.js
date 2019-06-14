@@ -25,7 +25,7 @@ function Form() {
                 
 function Modal() {
     return (
-        <div>
+        <>
             {/* Button Trigger Modal For testing purposes only */}
             <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                 Launch demo modal
@@ -51,7 +51,7 @@ function Modal() {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
                     );
                 }
                 
