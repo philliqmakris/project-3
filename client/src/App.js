@@ -13,9 +13,9 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <div>
+      <>
         <Banner />
-      <Navbar />
+        <Navbar />
         <Wrapper>
         <Route exact path="/" component={Main} />
         <Route exact path="/profiles" component={Profile} />
@@ -23,7 +23,7 @@ function App() {
         <Route exact path="/register" component={Register} />
         </Wrapper>
         <Footer />
-      </div>
+      </>
     </Router>
   );
 }
