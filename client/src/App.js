@@ -7,12 +7,14 @@ import Profile from './pages/Profile';
 import Navbar from './components/Navbar/index.js';
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
+import Banner from "./components/Banner/index.js";
 import './App.css';
 
 function App() {
   return (
     <Router>
       <div>
+        <Banner />
       <Navbar />
         <Wrapper>
         <Route exact path="/" component={Main} />
