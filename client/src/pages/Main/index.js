@@ -24,9 +24,9 @@ class Main extends Component{
     </div>
 
     <div class="container" id="staffTable">
-        <br />>
+        <br />
         <h1 class="staffTitle"><u>Educational Staff</u></h1>
-        <br />>
+        <br />
         <div class="row">
             <div class="col-md-8">
 
@@ -40,9 +40,9 @@ class Main extends Component{
             </div>
 
         </div>
-        <br />>
+        <br />
         <hr class="staffHr" />
-        <br />>
+        <br />
         <h2 class="edSupport"><u>Educational Support Team</u></h2>
         <br/>
         <div class="row">
