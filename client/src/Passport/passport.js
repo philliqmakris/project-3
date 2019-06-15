@@ -30,10 +30,10 @@ module.exports = function(passport) {
 				// 			done(null, newUser);
 
 				// 		} else {
-							db.User.create(newUser).then((user) => {
+							// db.User.create(newUser).then((user) => {
 
-								done(null, user);
-							});
+							// 	done(null, user);
+							// });
 					// 	}
 					// })
 					// .catch((err) => console.log(err));
