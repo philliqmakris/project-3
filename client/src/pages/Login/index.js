@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Modal from '../../components/Modal/Modal';
 
-class Main extends Component{
+class Login extends Component{
 
     componentDidMount(){
         /* Hook for initializing stuff */
@@ -17,4 +17,4 @@ class Main extends Component{
     }
 }
 
-export default Main;
+export default Login;
