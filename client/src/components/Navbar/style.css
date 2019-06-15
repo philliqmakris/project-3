@@ -1,9 +1,13 @@
+body{
+  font-family: 'Graduate', cursive;
+}
 nav.navbar.navbar-default {
   margin-bottom: 0;
 }
 
 #nav-banner{
   background-color: rgb(18, 68, 36) !important;
+  font-family: 'Graduate', cursive;
 }
 
 .logo-img{
