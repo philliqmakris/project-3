@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <>
-        <Banner />
+        {/* <Banner /> */}
         <Navbar />
         <Wrapper>
         <Route exact path="/" component={Main} />
