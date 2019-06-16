@@ -72,29 +72,21 @@ body {
     position: center;
 }
 
-#tandD {
-   
-}
 
 hr {
     background-color: rgb(19, 80, 41);
-    height: 4px;
-   
-    
+    height: 4px;    
 }
 
 
 #text-box {
-    
     background-size: cover;
     padding: 100px;
-    margin-top: 0px;
-    
+    margin-top: 0px;  
 }
 
 .black {
-    background-color: rgba(0, 0, 0, 0.116);
-    
+    background-color: rgba(0, 0, 0, 0.116);  
 }
 
 .edSupport {
