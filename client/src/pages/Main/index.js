@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import './style.css';
 
 class Main extends Component{
 
@@ -29,13 +29,13 @@ class Main extends Component{
         <div className="row">
             <div className="col-md-8">
                 <h2><u>Intructor</u>: <a className="todd" href="https://www.linkedin.com/in/tbehunin/" 
-                rel="noopener noreferrer" target="_blank">Todd
-                        Behunin</a></h2>
+                rel="noopener noreferrer" target="_blank"><span class="staffTodd">Todd
+                        Behunin</span></a></h2>
             </div>
 
             <div className="col-md-4">
                 <h2><u>Admin</u>: <a className="todd" href="https://www.linkedin.com/in/deana-dace-msm/"
-                    rel="noopener noreferrer" target="_blank">Deana Dace</a></h2>
+                    rel="noopener noreferrer" target="_blank"><span class="staffTodd">Deana Dace</span></a></h2>
             </div>
 
         </div>
@@ -46,18 +46,18 @@ class Main extends Component{
         <br/>
         <div className="row">
             <div className="col-md-4">
-                <h2><u>TA</u>: <a className="ta" href="https://www.linkedin.com/in/bocarlsonpdx/" rel="noopener noreferrer" target="_blank">Bo
-                        Carlson</a></h2>
+                <h2><u>TA</u>: <a className="ta" href="https://www.linkedin.com/in/bocarlsonpdx/" rel="noopener noreferrer" target="_blank"><span class="staffTodd">Bo
+                        Carlson</span></a></h2>
             </div>
 
             <div className="col-md-4">
-                <h2><u>TA</u>: <a className="ta" href="https://www.linkedin.com/in/chatfieldcreate/" rel="noopener noreferrer" target="_blank">Josh
-                        Chatfield</a></h2>
+                <h2><u>TA</u>: <a className="ta" href="https://www.linkedin.com/in/chatfieldcreate/" rel="noopener noreferrer" target="_blank"><span class="staffTodd">Josh
+                        Chatfield</span></a></h2>
             </div>
 
             <div className="col-md-4">
-                <h2><u>TA</u>: <a className="ta" href="https://www.linkedin.com/in/greg-kerstine/"  rel="noopener noreferrer" target="_blank">Greg
-                        Kerstine</a></h2>
+                <h2><u>TA</u>: <a className="ta" href="https://www.linkedin.com/in/greg-kerstine/"  rel="noopener noreferrer" target="_blank"><span class="staffTodd">Greg
+                        Kerstine</span></a></h2>
             </div>
         </div>
     </div>
