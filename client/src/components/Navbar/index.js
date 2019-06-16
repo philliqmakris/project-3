@@ -5,7 +5,10 @@ import "./style.css";
 function Navbar() {
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="navbar navbar-expand-lg navbar-dark" id="nav-banner">
+                <a className="navbar-brand" href="/">
+                    <img className="logo-img" src="https://commencement.uoregon.edu/sites/commencement2.uoregon.edu/files/guidebook-beaduck.png" alt="banner" />
+                </a>
                 <a className="navbar-brand" href="/">Campsite</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -19,7 +22,7 @@ function Navbar() {
                         </li>
                         <li className="nav-item">
                             <Link to="/Profiles" className={window.location.pathname === "/Profiles" ? "nav-link active" : "nav-link"}>
-                                Profiles
+                                Students
                             </Link>
                         </li>
                         <li className="nav-item">

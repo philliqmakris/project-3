@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Modal from '../../components/Modal/Modal';
+import Modal from '../../components/Modal';
 
 class Login extends Component{
 
