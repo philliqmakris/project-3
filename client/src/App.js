@@ -24,6 +24,7 @@ function App() {
         <Route exact path="/profiles" component={Profile} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
+        {/* <Route exact path="/" component={LoginGoogle} /> */}
         {/* <Route exact path="/auth/google" component={Passport} /> */}
         {/* <Route exact path="*" component={NotFound} /> */}
         </Wrapper>

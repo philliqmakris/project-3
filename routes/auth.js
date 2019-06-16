@@ -15,7 +15,7 @@ route.get(
 	}),
 	function(req, resp) {
 		// console.log(req.user);
-		resp.redirect('/dashboard');
+		resp.redirect('/');
 	}
 );
 
