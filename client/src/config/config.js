@@ -1,5 +1,5 @@
 const settings = {
-    host:"http://localhost:3001"
+    serverHost:"http://localhost:3001"
 }
 
 export default settings;

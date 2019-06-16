@@ -29,13 +29,15 @@ app.use((req, resp, next) => {
   next();
 });
 
+
 // Add routes, both API and view
 app.use(routes);
 
-
-
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/campsite");
+
+
+
 
 // Start the API server
 app.listen(PORT, function() {

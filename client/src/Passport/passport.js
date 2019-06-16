@@ -1,5 +1,7 @@
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
-const db = require('../../../models');
+const db = require('../../../models/user');
+
+
 module.exports = function(passport) {
 	passport.use(
 		new GoogleStrategy(
@@ -18,25 +20,28 @@ module.exports = function(passport) {
 					photo: profile.photos[0].value
 				};
 
-				// db.User
-				// 	.findAll({
-				// 		where: {
-				// 			GoogleID: newUser.GoogleID
-				// 		}
-				// 	})
-				// 	.then((user) => {
-				// 		if (user[0]) {
-				// 			//return USER
-				// 			done(null, newUser);
+console.log('myuser',newUser)
+				//* (accessToken,refreshToken,profile)=>{
 
-				// 		} else {
-							// db.User.create(newUser).then((user) => {
-
-							// 	done(null, user);
-							// });
-					// 	}
-					// })
-					// .catch((err) => console.log(err));
+			// }
+		//db.inventory.find( { qty: { $eq: 20 } } )
+				db
+					.find({ GoogleID:{$eq: newUser.GoogleID
+						}
+					})
+					.then((user) => {
+						console.log('Result',user)
+						if (user[0]) {
+							//return USER
+							done(null, newUser);
+					
+						} else {
+							db.create(newUser).then((user) => {
+								done(null, user);
+							});
+						}
+					})
+					.catch((err) => console.log(err));
 			}
 		)
 	);
