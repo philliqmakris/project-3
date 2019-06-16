@@ -13,15 +13,4 @@ router
   .put(userController.update)
   .delete(userController.remove);
 
-
-// // Matches with "/api/user/:id"
-// router
-//   .route("/googleid/:id")
-//   .get(userController.findById)
-//   .put(userController.update)
-//   .delete(userController.remove);
-
 module.exports = router;
-
-
-// db.inventory.find( { qty: { $eq: 20 } } )
