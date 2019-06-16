@@ -19,3 +19,7 @@ nav.navbar.navbar-default {
 .navbar-brand{
   font-size: 2rem;
 }
+
+.navbar{
+  display:flex;
+}

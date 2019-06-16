@@ -1,29 +1,21 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-// This file empties the Books collection and inserts the books below
+// This file empties the Users collection and inserts the user below
 
 mongoose.connect(
   process.env.MONGODB_URI ||
   "mongodb://localhost/campsite"
 );
 
-/*
-name: { type: String, required: true },
-  description: { type: String, required: true },
-  urlGithub: String,
-  urlImage: String,
-  date: 
-*/
-
 const userSeed = [
   {
-    GoogleID: "The Dead Zone",
-    firstName:"hello",
-    lastName: "Stephen King",
+    GoogleID: "12445",
+    firstName:"testFirstName",
+    lastName: "testLastname",
     emailAddress:
-      "A number-one national",
-      photo: "test"
+      "a@a.com",
+      photo: "testPhoto"
   }
 ];
 

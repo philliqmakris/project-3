@@ -17,7 +17,6 @@ export default {
   saveBook: function (studentData) {
     return axios.post("/api/student", studentData);
   },
-
   // Gets all Users
   getUsers: function () {
     return axios.get("/api/user");
