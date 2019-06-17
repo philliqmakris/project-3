@@ -3,7 +3,7 @@ body{
 }
 
 nav.navbar.navbar-default {
-  margin-bottom: 0;
+  margin-bottom: 0px;
 }
 
 #nav-banner{
@@ -23,4 +23,5 @@ nav.navbar.navbar-default {
 
 .navbar{
   display:flex;
+  
 }
