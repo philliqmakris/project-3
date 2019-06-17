@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Sidenav from '../../components/Sidenav';
 
 class Profile extends Component{
 
@@ -10,6 +11,7 @@ class Profile extends Component{
         return (
             <div>
                 {/* Profile page components go here */}
+                <Sidenav />
             </div>
         )
     }

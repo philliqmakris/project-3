@@ -7,7 +7,6 @@ import Profile from './pages/Profile';
 import Navbar from './components/Navbar/index.js';
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
-import Banner from "./components/Banner";
 
 import './App.css';
 
