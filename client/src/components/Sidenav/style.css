@@ -1,4 +1,15 @@
 /* The sidebar menu */
+.fa-bars {
+  position: fixed;
+  top: 50vh;
+  left: 0px;
+
+  -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
 .sidenav {
     height: 100%; /* Full-height: remove this if you want "auto" height */
     width: 200px; /* Set the width of the sidebar */

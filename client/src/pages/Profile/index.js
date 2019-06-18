@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Sidenav from '../../components/Sidenav';
+import ProfileCard from '../../components/ProfileCard';
 
 class Profile extends Component{
 
@@ -12,11 +13,22 @@ class Profile extends Component{
             <div>
                 {/* Profile page components go here */}
                 <div className = "row">
-                    <div className="col">
-                        <Sidenav />  
+                    <div className="col-sm-2">
+                        <div className="container mt-6">
+                            <Sidenav />   
+                        </div>  
                     </div>
-                    <div className="col">
-                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="profile img" />
+                    <div className="col-sm-10 mt-5">
+                        <div className="container">
+                            <div className="row mt-4">
+                                <ProfileCard />
+                                <ProfileCard />
+                                <ProfileCard />
+                                <ProfileCard />
+                                <ProfileCard />
+                                <ProfileCard />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
