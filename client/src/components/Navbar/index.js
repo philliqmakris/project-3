@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
-import config from "../../config/config"
+import config from "../../config/config";
+import "../Modal/index.js"
 
 function Navbar() {
     return (
@@ -15,31 +16,31 @@ function Navbar() {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav">
+                    <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
                             <Link to="/" className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
-                                Home
+                                | Home |
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link to="/Profiles" className={window.location.pathname === "/Profiles" ? "nav-link active" : "nav-link"}>
-                                Students
+                                | Students |
                             </Link>
                         </li> 
                         <li className="nav-item">
                             <Link to="/Register" className={window.location.pathname === "/Register" ? "nav-link active" : "nav-link"}>
-                                Register
+                                | Register |
                             </Link>
                         </li>
                         <li className="nav-item">                 
                             {
                                 (<a className={window.location.pathname === "/auth/logout" ? "nav-link active" : "nav-link"}
                                  href={config.serverHost +"/auth/logout"}>
-                                    Log Out
+                                    | Log Out |
                                     </a>) &&
                             (<a href={config.serverHost + "/auth/google"}
                                 className={window.location.pathname === "/auth/logout" ? "nav-link active" : "nav-link"}>
-                                    Log In
+                                    | Log In |
                                      </a>)
                             }
                             {/* <Link to="/Login" className={window.location.pathname === "/Login" ? "nav-link active" : "nav-link"}>

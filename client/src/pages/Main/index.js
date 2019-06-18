@@ -16,13 +16,16 @@ class Main extends Component{
         <div className="container" id="welcomeTable">
             <p className="welcome">Welcome to Campsite! Campsite is a student designed meeting space for bootcampers to
                 interact and collaborate</p>
+                
             <hr />>
             <p className="welcome">Campsite offers mutiple ways for students to keep in touch, utilizing the chat feature as
                 well as audio and video conferencing.</p>
         </div>
     </div>
 
-    <div className="container" id="staffTable">
+{/*STAFF INFO BELOW */}
+
+    {/* <div className="container" id="staffTable">
         <br />
         <h1 className="staffTitle"><u>Educational Staff</u></h1>
         <br />
@@ -60,7 +63,7 @@ class Main extends Component{
                         Kerstine</a></h2>
             </div>
         </div>
-    </div>
+    </div> */}
             </>
         )
     }
