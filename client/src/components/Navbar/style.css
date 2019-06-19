@@ -25,7 +25,6 @@ nav.navbar.navbar-default {
 }
 
 .navbar{
-<<<<<<< HEAD
   /* display:flex; */
   
 }
@@ -37,8 +36,6 @@ nav.navbar.navbar-default {
 
 .navbar-item {
   float: right;
-=======
   display:flex;
   
->>>>>>> ae6011481eae2d989a6c3b20055a40f5bb31d74b
 }
