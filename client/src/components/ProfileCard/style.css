@@ -7,3 +7,33 @@
     width: 80px;
     border-radius: 60px;
 }
+
+.card-header {
+    color: rgb(243, 243, 243);
+    font-size: 15px;
+    background-color: rgb(18, 68, 36);
+    border-radius: 120px;
+    margin: 0px;
+    
+}
+
+.list-group-item {
+    color: black;
+    font-size: 20px;
+    padding: 0px;
+}
+
+img {
+    height: 100px;
+    width: 80px;
+}
+
+.card-body {
+    background-color: rgb(22, 22, 22);
+    border-style: solid;
+    border-color: black;
+}
+
+#profCards {
+    border-radius: 20px;
+}

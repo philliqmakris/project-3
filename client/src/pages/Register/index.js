@@ -4,12 +4,12 @@ import "./style.css";
 
 function Form() {
     return (
+        
         <div className="container">
             <form>
                 <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Email address</label>
                     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-                    <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div className="form-group">
                     <label htmlFor="exampleInputPassword1">Password</label>
@@ -17,11 +17,12 @@ function Form() {
                 </div>
                 <div className="form-group">
                     <label htmlFor="exampleInputPassword1">Class ID</label>
-                    <input type="password" className="form-control" id="exampleInputPassword2" placeholder="Class ID" />
+                    <input type="text" className="form-control" id="exampleInputPassword2" placeholder="Class ID" />
                 </div>
                 <button type="submit" className="btn btn-primary">Submit</button>
             </form>
         </div>
+        
     );
 }
 
@@ -29,7 +30,7 @@ function Collapse() {
     return (
         <div className = "text-center">
             <p>
-              <button className="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              <button className="btn btn-primary" id="howToButton" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                 How to Register
               </button>
             </p>
@@ -54,8 +55,8 @@ class Register extends Component {
     render() {
         return (
             //Register page components go here
-            <div className="jumbotron">
-                <h1 className="display-6 text-center">Campsite Registration</h1>
+            <div className="reg">
+                <h1 className="regTitle">Campsite Registration</h1>
                 <Collapse />
                 <Form />
             </div>

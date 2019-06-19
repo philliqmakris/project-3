@@ -1,0 +1,35 @@
+.reg {
+    background-color: rgb(20, 20, 20);
+    
+}
+
+form {
+    padding: 20px;
+    margin: 20px;
+}
+
+.regTitle {
+    padding: 20px;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Graduate', cursive;
+}
+
+#howToButton {
+    
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    font-size: 15px;
+    border-style: solid;
+    border-color: rgb(18, 68, 36);
+}
+
+label {
+    font-size: 35px;
+    font-family: 'Graduate', cursive;
+}
+
+.form-control {
+    font-size: 25px;
+    
+}

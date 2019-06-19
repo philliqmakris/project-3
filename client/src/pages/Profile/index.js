@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Sidenav from '../../components/Sidenav';
+import Sidenav from '../../components/sideNav';
 import ProfileCard from '../../components/ProfileCard';
 import './style.css';
 
