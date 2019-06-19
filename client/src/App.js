@@ -7,6 +7,7 @@ import Profile from './pages/Profile';
 import Navbar from './components/Navbar/index.js';
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
+import Banner from "./components/Banner";
 
 import './App.css';
 
@@ -14,22 +15,14 @@ function App() {
   return (
     <Router>
       <>
-      <div className = "row">
-        <div className="col"> 
-          <Navbar />
-          <Wrapper>
-          <Route exact path="/" component={Main} />
-          <Route exact path="/profiles" component={Profile} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/register" component={Register} />
-          </Wrapper>
-        </div>
-      </div>
-      <div className = "row">
-        <div className="col"> 
+        <Navbar />
+        <Wrapper>
+        <Route exact path="/" component={Main} />
+        <Route exact path="/profiles" component={Profile} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
+        </Wrapper>
         <Footer />
-        </div>
-      </div>
       </>
     </Router>
   );
