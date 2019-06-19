@@ -1,8 +1,10 @@
 import React from 'react';
 import './style.css';
 
-function ProfileCard() {
+function ProfileCard(props) {
     return (
+        <>
+        
          <div className="d-flex flex-column p-1">
             <div className="card ml-1 mr-1 text-center bg-light">
                 <div className="card-body">
@@ -16,6 +18,7 @@ function ProfileCard() {
                 </div>
             </div>
         </div>
+        </>
             );
         }
         
