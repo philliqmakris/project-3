@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ProfileCard from '../ProfileCard';
 import './style.css';
 
+
 function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
