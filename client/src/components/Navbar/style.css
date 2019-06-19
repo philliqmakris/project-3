@@ -1,8 +1,9 @@
-body{
+.navbar{
   font-family: 'Graduate', cursive;
 }
+
 nav.navbar.navbar-default {
-  margin-bottom: 0;
+  margin-bottom: 0px;
 }
 
 #nav-banner{
@@ -24,6 +25,7 @@ nav.navbar.navbar-default {
 }
 
 .navbar{
+<<<<<<< HEAD
   /* display:flex; */
   
 }
@@ -35,4 +37,8 @@ nav.navbar.navbar-default {
 
 .navbar-item {
   float: right;
+=======
+  display:flex;
+  
+>>>>>>> ae6011481eae2d989a6c3b20055a40f5bb31d74b
 }

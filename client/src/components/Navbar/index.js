@@ -7,7 +7,7 @@ import "../Modal/index.js"
 function Navbar() {
     return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-dark" id="nav-banner">
+            <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="nav-banner">
                 <a className="navbar-brand" href="/">
                     <img className="logo-img" src="https://commencement.uoregon.edu/sites/commencement2.uoregon.edu/files/guidebook-beaduck.png" alt="banner" />
                 </a>
