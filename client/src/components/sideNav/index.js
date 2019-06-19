@@ -23,7 +23,7 @@ class Sidenav extends Component{
             <div>
             
                 <div id="mySidebar" className="sidebar align-content-center mr-5">
-                    <a href={'javascript:void(0)'} className="closebtn" onClick={closeNav}>&times;</a>
+                    <button className="closebtn" onClick={closeNav}>&times;</button>
                     <ProfileCard />
                 </div>
 
