@@ -31,6 +31,7 @@ function Navbar() {
                                 Register
                             </Link>
                         </li>
+
                         <li className="nav-item">                 
                             {
                                 (<a className={window.location.pathname === "/auth/logout" ? "nav-link active" : "nav-link"}

@@ -18,22 +18,9 @@ function SavedResults (props){
         </button>
         </a>
 
-        <button type="submit" 
-        onClick={props.handleDelete}
-        className="btn btn-info mr-2 float-right"
-        data-id={result._id}
-        >
-          Delete
-        </button>
-
-        {/* <a href={result.buy}  target="_blank" >
-         <button type="submit" className="btn btn-info mr-2 float-right">
-         Buy
-        </button>
-        </a> */}
           <a href={result.urlGithub}>
           <img alt={result.name}
-          src={result.img}
+          src={result.urlImage}
           className="img-fluid rounded float-left mr-2" />
           </a>
 
