@@ -17,13 +17,13 @@ function openNav() {
   }
 
 class Sidenav extends Component{
+
     render(){
         return (
             <>
-            
                 <div id="mySidebar" className="sidebar align-content-center mr-5">
                     <button className="closebtn" onClick={closeNav}>&times;</button>
-                    <ProfileCard />
+                    {/* <ProfileCard /> */}
                 </div>
 
                 <div id="main">

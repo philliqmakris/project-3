@@ -14,9 +14,10 @@ const studentSeed = [
     name: "Arunav Gupta",
     urlImage:"https://picsum.photos/200",
     urlGithub: "https://github.com/arunav1101",
+    urlLinkedIn:"https://www.linkedin.com/in/guptaarunav/",
     batchId:'OREPOR201901FSF3',
     description:
-      "I am Arunav Gupta",
+      "Certified Scrum Master, QA Consultant at Nike, TOSCA Specialist, Certified AWS Developer Associate.",
     date: new Date(Date.now())
   },
   {

@@ -19,13 +19,15 @@ route.get(
 	}),
 	function(req, resp) {
 		console.log(req.user);
-		resp.redirect("http://localhost:3000");
+		resp.redirect("http://localhost:3000/Profiles");
 	}
 );
 
 route.get('/verify', (req, res) => {
+
+	console.log('verify',req)
 	if (req.user) {
-		// console.log(req.user);
+		console.log(req.user);
 	} else {
 		console.log('not auth');
 	}

@@ -1,23 +1,25 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import Container from "../../components/Container";
-
+import ProfileCard from "../../components/ProfileCard";
+import Sidenav from "../../components/Sidenav";
 import SavedResults from "../../components/SavedResults";
+import config from "../../config/config"
 
 
-class Saved extends Component {
+class Profile extends Component {
+  
   state = {
     stud:[],
   };
 
    componentDidMount() {
-    console.log("i am called")  
     this.loadStudents();
+    this.verifyLogin();
       
     }
   
-     loadStudents = () => {
-        console.log("i am caloadStudentslled")   
+     loadStudents = () => {  
       API.getStudents()
         .then(res =>{
           console.log('api',res.data)
@@ -26,6 +28,15 @@ class Saved extends Component {
         )
         .catch(err => console.log(err));
     };
+verifyLogin=()=>{
+API.verifyUser()
+.then(res=>{
+  console.log('verifylogin',res);
+})
+  // {config.serverHost + "/auth/google}
+
+
+}
 
   deleteStudent = ({target}) => {
 const {dataset} =target;
@@ -34,24 +45,26 @@ const {dataset} =target;
       .catch(err => console.log(err));
   };
 
+  
   render() {
     return (
-      <div>
-        <Container style={{ minHeight: "80%" }}>
-        {this.state.stud.length ? (
-          <SavedResults results={this.state.stud} 
-          handleDelete={this.deleteStudent}
-          />
-        ):(
-          <h3>No Results to Display</h3>
-        )}
-        </Container>
-      </div>
-    );
+      <div className="d-flex flex-row">
+                    <div className="d-flex flex-column align-self-center mr-5">
+                         <Sidenav />   
+                     </div>
+                     <div className="d-flex flex-column mt-5">
+                        
+                         <div className="row text-center mt-5" id="cardDiv">
+                           <ProfileCard results={this.state.stud} />
+
+</div>
+</div>
+</div>
+    )
   }
 }
-export default Saved;
 
+export default Profile;
 
 //*** Card structure by NASh */
 
