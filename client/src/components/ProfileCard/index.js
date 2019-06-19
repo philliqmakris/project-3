@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css';
 
+
 function ProfileCard() {
     return (
          <div className="d-flex flex-column p-1">
