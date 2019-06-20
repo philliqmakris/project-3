@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import Sidenav from '../../components/Sidenav';
 import ProfileCard from '../../components/ProfileCard';
 import './style.css';
-
+import openSocket from 'socket.io-client';
+const socket = openSocket('http://localhost:3001');
+ 
 class Profile extends Component{
 
     componentDidMount() {
         /* Hook for initializing stuff */
-
     }
     
     render(){

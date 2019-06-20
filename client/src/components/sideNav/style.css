@@ -6,7 +6,8 @@
     z-index: 1; /* Stay on top */
     top: 70px;
     left: 0;
-    background-color: rgb(18, 68, 36); /* Black*/
+    background-color: rgb(18, 68, 36); /* UO green*/
+    color: black;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.25s; /* 0.25 second transition effect to slide in the sidebar */
