@@ -4,8 +4,6 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 const passport = require("passport");
 
-
-
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -23,18 +21,18 @@ app.use(passport.initialize());
 app.use(passport.session());
 const authRoutes = require("./routes/auth");
 app.use("/auth", authRoutes);
-//Declare Global Variables
+// //Declare Global Variables
 app.use((req, resp, next) => {
   resp.locals.user = req.user || null;
   next();
 });
-
 
 // Add routes, both API and view
 app.use(routes);
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/campsite");
+
 
 
 

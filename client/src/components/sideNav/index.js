@@ -20,11 +20,10 @@ class Sidenav extends Component{
 
     render(){
         return (
-            <div>
-            
+            <>
                 <div id="mySidebar" className="sidebar align-content-center mr-5">
                     <button className="closebtn" onClick={closeNav}>&times;</button>
-                    <ProfileCard />
+                    {/* <ProfileCard /> */}
                 </div>
 
                 <div id="main">
@@ -32,7 +31,7 @@ class Sidenav extends Component{
                 </div>
 
 
-            </div>
+            </>
         
         );
     }
