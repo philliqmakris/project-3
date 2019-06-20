@@ -35,7 +35,6 @@ module.exports = (passport)=> {
 		done(null, user);
 	});
 	passport.deserializeUser((user, done) => {
-
 		done(null, user);
 	});
 };

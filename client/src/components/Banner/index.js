@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-import config from "../../config/config"
+// import config from "../../config/config"
 
 
 function Banner() {
@@ -15,14 +15,6 @@ function Banner() {
 
       <div className="col-md-8">
 
-      
-        {(<a className="studentButton btn btn-log-out"
-          href={config.serverHost +"/auth/logout"}>
-          Log Out
-        </a>) &&
-          (<a href={config.serverHost + "/auth/google"}
-            className="studentButton btn btn-log-in">Log In</a>)
-        }
       </div>
     </div>
   );
