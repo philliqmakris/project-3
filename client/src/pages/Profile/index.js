@@ -6,14 +6,13 @@ import Sidenav from "../../components/Sidenav";
 import SavedResults from "../../components/SavedResults";
 import Chat from "../../components/Chat"
 import config from "../../config/config"
-/* Socket.io */
-//import openSocket from 'socket.io-client';
+
 
 
 class Profile extends Component {
 
   state = {
-    stud: [],
+    stud: []
   };
 
   componentDidMount() {
@@ -38,7 +37,6 @@ class Profile extends Component {
       })
     // {config.serverHost + "/auth/google}
 
-
   }
 
   deleteStudent = ({ target }) => {
@@ -50,6 +48,7 @@ class Profile extends Component {
 
 
   render() {
+
     return (
       <div className="d-flex flex-row">
         <div className="d-flex flex-column align-self-center mr-5">

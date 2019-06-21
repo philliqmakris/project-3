@@ -3,13 +3,8 @@ import "./style.css";
 import config from "../../config/config";
 /* Socket.io */
 import openSocket from 'socket.io-client';
+
 const socket = openSocket(config.serverHost);
-
-var msg_recieved = '';
-
-socket.on('chat message', function(msg){
-    console.log(msg);
-  });
 
 
 class Chat extends Component {
@@ -17,12 +12,14 @@ class Chat extends Component {
     state = {
         name: '',
         msg: '',
-        chatArr: msg_recieved
+        recieve_msg: 'placeholder'
     }
-
     
     componentDidMount() {
-        //
+
+        let message = '';
+
+        socket.on('chat message', (msg)=>{this.addMsg(msg)});
     }
     
     handleInputChange = event => {
@@ -36,14 +33,25 @@ class Chat extends Component {
     };
 
     handleClick = () => {
-        console.log(this.state.msg);
+
+        let message = '';
+
+        //console.log(this.state.msg);
         socket.emit('chat message', this.state.msg);
         this.setState({
             msg: ''
         });
+
+    }
+
+    addMsg = (msg) => {
+        this.setState({
+            recieve_msg: msg
+          });
     }
 
     render() {
+
 
         return (
             <div className="container">
@@ -61,7 +69,7 @@ class Chat extends Component {
                             <div className="panel-collapse collapse" id="collapseOne">
                                 <div className="panel-body">
                                     <ul className="chat">
-                                        <li>{this.state.chatArr}</li>
+                                        <li>{(this.state.recieve_msg).toString()}</li>
                                     </ul>
                                 </div>
                                 <div className="panel-footer">
