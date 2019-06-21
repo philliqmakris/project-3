@@ -13,16 +13,16 @@ function ProfileCard(props) {
                             <ul className="list-group list-group-flush">
                                 {/* <li className="list-group-item">{result.description}</li> */}
                                 <li className="list-group-item">
-                                    <a className="icons mb-2" href={result.urlGithub}>
+                                    <a className="icons mb-2" href={result.urlGithub} target="_blank" rel="noopener noreferrer">
                                         <i className="fab fa-github"></i>
                                     </a>
-                                    <a className="icons mb-2" href={result.urlLinkedIn} target="_blank">
+                                    <a className="icons mb-2" href={result.urlLinkedIn} target="_blank" rel="noopener noreferrer">
                                         <i className="fab fa-linkedin"></i>
                                     </a>
-                                    <a className="icons mb-2" href="https://myvcs.herokuapp.com/" target="_blank" >
+                                    <a className="icons mb-2" href="https://myvcs.herokuapp.com/" target="_blank" rel="noopener noreferrer" >
                                         <i className="fas fa-video"></i>
                                     </a>
-                                    <a className="icons mb-2" href="" target="_blank" >
+                                    <a className="icons mb-2" href="" target="_blank" rel="noopener noreferrer" >
                                         <i className="fab fa-rocketchat"></i>
                                     </a>
                                 </li>
@@ -39,4 +39,3 @@ function ProfileCard(props) {
 
 export default ProfileCard;
 
-{/* <i class="fab fa-github"></i> */ }
