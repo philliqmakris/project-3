@@ -12,12 +12,10 @@ class Chat extends Component {
     state = {
         name: '',
         msg: '',
-        recieve_msg: 'placeholder'
+        recieve_msg: []
     }
     
     componentDidMount() {
-
-        let message = '';
 
         socket.on('chat message', (msg)=>{this.addMsg(msg)});
     }
@@ -34,8 +32,6 @@ class Chat extends Component {
 
     handleClick = () => {
 
-        let message = '';
-
         //console.log(this.state.msg);
         socket.emit('chat message', this.state.msg);
         this.setState({
@@ -46,8 +42,10 @@ class Chat extends Component {
 
     addMsg = (msg) => {
         this.setState({
-            recieve_msg: msg
-          });
+            recieve_msg: [...this.state.recieve_msg, msg]
+          })
+
+          console.log(this.state.recieve_msg);
     }
 
     render() {
@@ -69,7 +67,9 @@ class Chat extends Component {
                             <div className="panel-collapse collapse" id="collapseOne">
                                 <div className="panel-body">
                                     <ul className="chat">
-                                        <li>{(this.state.recieve_msg).toString()}</li>
+                                    {this.state.recieve_msg.map(item => (
+                                        <li key={item}>{item}</li>
+                                    ))}
                                     </ul>
                                 </div>
                                 <div className="panel-footer">
@@ -88,6 +88,12 @@ class Chat extends Component {
             </div>
         );
     }
+}
+
+function ChatBubble(message){
+    return(
+        <li>{message}</li>
+    );
 }
 
 export default Chat;
