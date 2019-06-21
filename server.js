@@ -21,6 +21,16 @@ const io = require('socket.io')(http);
 
 io.on('connection', (client) => {
   console.log('user connected');
+
+  client.on('disconnect', function(){
+    console.log('user disconnected');
+  });
+
+  client.on('chat message', function(msg){
+    console.log(msg);
+    io.emit('chat message', msg);
+  });
+
 });
 
 //Passport Strategy
