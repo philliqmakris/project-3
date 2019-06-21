@@ -5,6 +5,7 @@ import ProfileCard from "../../components/ProfileCard";
 import Sidenav from "../../components/Sidenav";
 import SavedResults from "../../components/SavedResults";
 import config from "../../config/config"
+import Sidenav2 from "../../components/Sidenav2"
 
 
 class Profile extends Component {
@@ -48,9 +49,11 @@ const {dataset} =target;
   
   render() {
     return (
+      
       <div className="d-flex flex-row">
                     <div className="d-flex flex-column align-self-center mr-5">
-                         <Sidenav />   
+                         <Sidenav />
+                         <Sidenav2 />   
                      </div>
                      <div className="d-flex flex-column mt-5">
                         
@@ -59,7 +62,9 @@ const {dataset} =target;
 
 </div>
 </div>
+
 </div>
+
     )
   }
 }

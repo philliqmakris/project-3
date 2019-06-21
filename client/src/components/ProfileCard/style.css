@@ -1,17 +1,19 @@
 #cardDiv .card{
-    height: 250px !important;
+    height: 300px !important;
     width:200px !important;
     font-size: 10px;
 } img{
     height: 100px;
     width: 100px;
-    border-radius: 60px;
+    border-radius: 55px;
 }
 
 .card-header ,.list-group-item{
     color:black;
-    font-size:1rem;
-    text-align:left;
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'Graduate', cursive;
+
 }
 
 .icons {
@@ -19,3 +21,25 @@
     margin-right : 10px;
   
 }
+
+.card {
+    background-color: rgb(26, 24, 24);
+   /* border-radius: 10px; */
+   margin-bottom: 40px;
+   
+}
+
+.card-header {
+    color: white!important;
+    background-color: rgb(18, 68, 36) !important;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+#cardSection {
+    /* background- */
+    border-radius: 20px;
+}
+
+
+
