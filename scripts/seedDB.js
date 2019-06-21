@@ -11,11 +11,40 @@ mongoose.connect(
 
 const studentSeed = [
   {
-    name: "TestName",
-    urlImage:"TestImageUrl",
-    urlGithub: "TestgithubURL",
+    name: "Arunav Gupta",
+    urlImage:"https://picsum.photos/200",
+    urlGithub: "https://github.com/arunav1101",
+    urlLinkedIn:"https://www.linkedin.com/in/guptaarunav/",
+    batchId:'OREPOR201901FSF3',
     description:
-      "TestDescription",
+      "Certified Scrum Master, QA Consultant at Nike, TOSCA Specialist, Certified AWS Developer Associate.",
+    date: new Date(Date.now())
+  },
+  {
+    name: "Nash",
+    urlImage:"https://picsum.photos/200",
+    urlGithub: "https://github.com/arunav1101",
+    batchId:'OREPOR201901FSF3',
+    description:
+      "I am ANash",
+    date: new Date(Date.now())
+  },
+  {
+    name: "Phil",
+    urlImage:"https://picsum.photos/200",
+    urlGithub: "https://github.com/arunav1101",
+    batchId:'OREPOR201901FSF3',
+    description:
+      "I am Phil",
+    date: new Date(Date.now())
+  },
+  {
+    name: "Todd",
+    urlImage:"https://picsum.photos/200",
+    urlGithub: "https://github.com/arunav1101",
+    batchId:'OREPOR201901FSF3',
+    description:
+      "I am Todd",
     date: new Date(Date.now())
   }
 ];

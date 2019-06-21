@@ -1,39 +1,21 @@
 #cardDiv .card{
-    height: 325px !important;
-    width: 150px !important;
+    height: 250px !important;
+    width:200px !important;
     font-size: 10px;
 } img{
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
     border-radius: 60px;
 }
 
-.card-header {
-    color: rgb(243, 243, 243);
-    font-size: 15px;
-    background-color: rgb(18, 68, 36);
-    border-radius: 120px;
-    margin: 0px;
-    
+.card-header ,.list-group-item{
+    color:black;
+    font-size:1rem;
+    text-align:left;
 }
 
-.list-group-item {
-    color: black;
-    font-size: 20px;
-    padding: 0px;
-}
-
-img {
-    height: 100px;
-    width: 80px;
-}
-
-.card-body {
-    background-color: rgb(22, 22, 22);
-    border-style: solid;
-    border-color: black;
-}
-
-#profCards {
-    border-radius: 20px;
+.icons {
+    color:black;
+    margin-right : 10px;
+  
 }
