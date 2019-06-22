@@ -27,7 +27,6 @@ io.on('connection', (client) => {
   });
 
   client.on('chat message', function(msg){
-    console.log(msg);
     io.emit('chat message', msg);
   });
 
