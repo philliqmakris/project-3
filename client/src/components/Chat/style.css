@@ -3,6 +3,16 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    color: black;
+}
+
+.chatContainer
+{
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+    color: black;
+    padding-left: 60px;
 }
 
 .chat li

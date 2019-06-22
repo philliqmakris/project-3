@@ -51,6 +51,9 @@ class Profile extends Component {
 
     return (
       <div className="d-flex flex-row">
+        <div className="d-flex flex-column text-right">
+          <Chat />
+        </div>
         <div className="d-flex flex-column align-self-center mr-5">
           <Sidenav />
         </div>
@@ -59,9 +62,8 @@ class Profile extends Component {
             <ProfileCard results={this.state.stud} />
           </div>
         </div>
-        <Chat />
       </div>
-    )
+    );
   }
 }
 
