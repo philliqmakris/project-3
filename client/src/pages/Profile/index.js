@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import ProfileCard from "../../components/ProfileCard";
 import Sidenav from "../../components/Sidenav";
-import Rightnav from "../../components/Sidenav";
 
 
 class Profile extends Component {
@@ -23,15 +22,18 @@ class Profile extends Component {
     getUserDetails=async ()=>{
       const loggedInUserId = window.location.toString().split("/").pop().split('#')[0];
       await API.getUserByGoogleId(loggedInUserId)
-      .then(res =>{
-        this.setState({ loggedUser: res.data })
+      .then(async (res) =>{
+        await this.setState({ loggedUser: res.data })
+       
+
       })
     }
   
      loadStudents = () => {  
       API.getStudents()
-        .then(res =>{
-          this.setState({ stud: res.data })
+        .then(async (res) =>{
+          await this.setState({ stud: res.data })
+          await this.props.isAuthenticated(true)
         }
         )
         .catch(err => console.log(err));
