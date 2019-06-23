@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ProfileCard from '../ProfileCard';
+import LoggedInUser from '../LoggedInUser';
 import './style.css';
 
 
@@ -17,22 +17,18 @@ function openNav() {
   }
 
 class Sidenav extends Component{
-
     render(){
         return (
             <>
                 <div id="mySidebar" className="sidebar align-content-center mr-5">
                     <button className="closebtn" onClick={closeNav}>&times;</button>
-                    {/* <ProfileCard /> */}
+                    { <LoggedInUser loggedUserDetails={this.props.loggedUserDetails}/>}
                 </div>
 
                 <div id="main">
                     <button className="openbtn" id="hamburger" onClick={openNav}><i className="fas fa-bars"></i></button> 
                 </div>
-
-
             </>
-        
         );
     }
 }

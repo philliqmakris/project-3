@@ -1,42 +1,41 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-import Container from "../../components/Container";
 import ProfileCard from "../../components/ProfileCard";
 import Sidenav from "../../components/Sidenav";
-import SavedResults from "../../components/SavedResults";
-import config from "../../config/config"
+import Rightnav from "../../components/Sidenav";
 
 
 class Profile extends Component {
   
   state = {
     stud:[],
+    loggedUser:[],
+    filterUser:[]
+
   };
 
    componentDidMount() {
     this.loadStudents();
-    this.verifyLogin();
-      
+    this.getUserDetails(); 
+    this.filterLoggedUser();     
+    }
+
+    getUserDetails=async ()=>{
+      const loggedInUserId = window.location.toString().split("/").pop().split('#')[0];
+      await API.getUserByGoogleId(loggedInUserId)
+      .then(res =>{
+        this.setState({ loggedUser: res.data })
+      })
     }
   
      loadStudents = () => {  
       API.getStudents()
         .then(res =>{
-          console.log('api',res.data)
           this.setState({ stud: res.data })
         }
         )
         .catch(err => console.log(err));
     };
-verifyLogin=()=>{
-API.verifyUser()
-.then(res=>{
-  console.log('verifylogin',res);
-})
-  // {config.serverHost + "/auth/google}
-
-
-}
 
   deleteStudent = ({target}) => {
 const {dataset} =target;
@@ -45,17 +44,28 @@ const {dataset} =target;
       .catch(err => console.log(err));
   };
 
+  filterLoggedUser= async ()=>{
+   await this.getUserDetails();
+const userFilter =(this.state.loggedUser.map(userdetails=>userdetails.firstName +' '+ userdetails.lastName ));
+this.setState({ filterUser: userFilter[0].toLocaleLowerCase().trim() })
+  }
   
   render() {
-    return (
+
+  return (
       <div className="d-flex flex-row">
                     <div className="d-flex flex-column align-self-center mr-5">
-                         <Sidenav />   
+                         <Sidenav loggedUserDetails={this.state.loggedUser}/>   
                      </div>
                      <div className="d-flex flex-column mt-5">
                         
                          <div className="row text-center mt-5" id="cardDiv">
-                           <ProfileCard results={this.state.stud} />
+                         
+                           <ProfileCard 
+                           results={this.state.stud.filter(
+                             (myfilter)=>
+                                myfilter.name.toLocaleLowerCase().trim()!==this.state.filterUser)} 
+                                />
 
 </div>
 </div>
