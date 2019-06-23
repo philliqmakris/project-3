@@ -1,5 +1,5 @@
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
-const db = require('../../../models/user');
+const db = require('../../../models');
 
 
 module.exports = (passport)=> {
@@ -19,15 +19,15 @@ module.exports = (passport)=> {
 					photo: profile.photos[0].value
 				};
 				
-				db
+				db.User
 					.find({ GoogleID:{$eq: newUser.GoogleID}
 					})
 					.then((user) => {
 						if (user[0]) done(null, newUser);
-						else db.create(newUser).then((user) =>done(null, user));
+						else db.User.create(newUser).then((user) =>done(null, user));
 					})
 					.catch((err) => console.log(err));
-			}
+				}
 		)
 	);
 

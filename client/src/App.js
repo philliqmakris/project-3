@@ -18,7 +18,7 @@ function App() {
         <Navbar />
         <Wrapper>
         <Route exact path="/" component={Main} />
-        <Route exact path="/profiles" component={Profile} />
+        <Route exact path="/profiles/*" component={Profile} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
         </Wrapper>
