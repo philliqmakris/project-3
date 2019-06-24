@@ -15,7 +15,7 @@ render(){
                     </div>
                     <div className="col-4 ml-0 ">
                     <input 
-                      disabled={this.props.isAuth}
+                    disabled={this.props.isAuth}
                      value={this.props.search}
                      onChange={this.props.handleInputChange}
                     type="input" 
@@ -26,6 +26,7 @@ render(){
                 </div>
                 <div className="col-2">
                 <button type="submit" 
+                disabled={this.props.isAuth}
                 onClick={this.props.handleFormSubmit} 
                 className="btn btn-success">
                 Authenticate</button>
