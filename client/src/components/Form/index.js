@@ -26,7 +26,6 @@ render(){
                 </div>
                 <div className="col-2">
                 <button type="submit" 
-                
                 onClick={this.props.handleFormSubmit} 
                 className="btn btn-success">
                 Authenticate</button>
