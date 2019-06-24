@@ -25,7 +25,7 @@ function ProfileCard(props) {
                                     {/* {Need to put the chat link} */}
                                     <a className="icons mb-2" href="https://myvcs.herokuapp.com/" target="_blank" rel="noopener noreferrer" >
                                         <i className="fab fa-rocketchat"></i>
-                                    </a> */}
+                                    </a> 
                                 </li>
 
                             </ul>
