@@ -3,3 +3,6 @@ label{
     font-size: 20px;
     font-weight: bold
 }
+.errClass{
+    color: red;
+}
