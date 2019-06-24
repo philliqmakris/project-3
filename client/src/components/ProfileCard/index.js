@@ -5,7 +5,7 @@ function ProfileCard(props) {
     return (
         <>
             {props.results.map(result => (
-                <div className="d-flex flex-column p-1">
+                <div className="d-flex flex-column p-1" key={result._id}>
                     <div className="card ml-1 mr-1 text-center bg-light">
                         <div className="card-body" >
                             <img className="mb-2" src={result.urlImage} alt={result.name} />
@@ -19,10 +19,11 @@ function ProfileCard(props) {
                                     <a className="icons mb-2" href={result.urlLinkedIn} target="_blank" rel="noopener noreferrer">
                                         <i className="fab fa-linkedin"></i>
                                     </a>
-                                    <a className="icons mb-2" href="https://myvcs.herokuapp.com/" target="_blank" rel="noopener noreferrer" >
+                                    <a className="icons mb-2" href="https://arunav1101.github.io/learnVChat" target="_blank" rel="noopener noreferrer">
                                         <i className="fas fa-video"></i>
                                     </a>
-                                    <a className="icons mb-2" href="" target="_blank" rel="noopener noreferrer" >
+                                    {/* {Need to put the chat link} */}
+                                    <a className="icons mb-2" href="https://myvcs.herokuapp.com/" target="_blank" rel="noopener noreferrer" >
                                         <i className="fab fa-rocketchat"></i>
                                     </a>
                                 </li>
@@ -38,4 +39,3 @@ function ProfileCard(props) {
 }
 
 export default ProfileCard;
-
