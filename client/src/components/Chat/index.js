@@ -53,13 +53,13 @@ class Chat extends Component {
 
         return (
             <div className="container chatContainer">
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <button className="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                   Chat
                 </button>   
 
    
-                <div class="collapse" id="collapseExample">
-                    <div class="card card-body">
+                <div className="collapse" id="collapseExample">
+                    <div className="card card-body">
                         <div className="panel-body">
                             <ul className="chat text-left">
                                 {this.state.recieve_msg.map(item => (
@@ -106,12 +106,6 @@ class Chat extends Component {
             </div> */
         );
     }
-}
-
-function ChatBubble(message) {
-    return (
-        <li>{message}</li>
-    );
 }
 
 export default Chat;

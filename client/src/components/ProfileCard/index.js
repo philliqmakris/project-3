@@ -5,7 +5,7 @@ function ProfileCard(props) {
     return (
         <>
             {props.results.map(result => (
-                <div className="d-flex flex-column p-1">
+                <div className="d-flex flex-column p-1" key={result.name}>
                     <div className="card ml-1 mr-1 text-center bg-light">
                         <div className="card-body" >
                             <img className="mb-2" src={result.urlImage} alt={result.name} />
@@ -22,9 +22,9 @@ function ProfileCard(props) {
                                     <a className="icons mb-2" href="https://myvcs.herokuapp.com/" target="_blank" rel="noopener noreferrer" >
                                         <i className="fas fa-video"></i>
                                     </a>
-                                    <a className="icons mb-2" href="" target="_blank" rel="noopener noreferrer" >
+{/*                                     <a className="icons mb-2" href="" target="_blank" rel="noopener noreferrer" >
                                         <i className="fab fa-rocketchat"></i>
-                                    </a>
+                                    </a> */}
                                 </li>
 
                             </ul>

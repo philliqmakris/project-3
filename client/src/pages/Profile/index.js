@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-import Container from "../../components/Container";
+//import Container from "../../components/Container";
 import ProfileCard from "../../components/ProfileCard";
-//import Sidenav from "../../components/Sidenav";
-import SavedResults from "../../components/SavedResults";
+import Sidenav from "../../components/Sidenav";
+//import SavedResults from "../../components/SavedResults";
 import Chat from "../../components/Chat"
-import config from "../../config/config"
+//import config from "../../config/config"
 
 
 
@@ -55,7 +55,7 @@ class Profile extends Component {
           <Chat />
         </div>
         <div className="d-flex flex-column align-self-center mr-5">
-          {/* <Sidenav /> */}
+          <Sidenav />
         </div>
         <div className="d-flex flex-column mt-5">
           <div className="row text-center mt-5" id="cardDiv">
