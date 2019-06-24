@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Main from './pages/Main';
 import Login from './pages/Login';
@@ -10,21 +10,42 @@ import Wrapper from "./components/Wrapper";
 
 import './App.css';
 
-function App() {
+class App extends Component {
+
+  state={
+    isAuthenticate:false
+  }
+  isAuthenticated=async(event)=>{
+  console.log('app.js',event)
+    this.setState({
+      isAuthenticate:event
+    })
+  }
+
+  render(){
   return (
     <Router>
       <>
-        <Navbar />
+        <Navbar  isAuthenticate={this.state.isAuthenticate} />
         <Wrapper>
         <Route exact path="/" component={Main} />
-        <Route exact path="/profiles" component={Profile} />
+       
         <Route exact path="/login" component={Login} />
+        
+        
+        <Route 
+        path="/profiles/*" 
+        render={(props) => <Profile {...props}  isAuthenticate={this.state.isAuthenticate}
+        isAuthenticated={this.isAuthenticated} />}
+        />
+
         <Route exact path="/register" component={Register} />
         </Wrapper>
         <Footer />
       </>
     </Router>
   );
+}
 }
 
 export default App;

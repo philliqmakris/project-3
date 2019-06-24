@@ -48,10 +48,7 @@ app.use((req, resp, next) => {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/campsite");
-
-
-
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/campsite",{ useNewUrlParser: true }) ;
 
 
 // Start the API server

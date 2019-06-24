@@ -4,8 +4,10 @@ import "./style.css";
 import config from "../../config/config"
 
 class Navbar extends Component {
-    state = {}
+    state = {
+    }
     render() {
+        
         return (
             <>
                 <nav className="navbar navbar-expand-lg navbar-dark" id="nav-banner">
@@ -23,12 +25,12 @@ class Navbar extends Component {
                                     Home
                             </Link>
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link to="/Register" className={window.location.pathname === "/Register" ? "nav-link active" : "nav-link"}>
                                     Register
                             </Link>
-                            </li>
-
+                            </li> */}
+                            {(this.props.isAuthenticate)?
                             <li className="nav-item">
 
                                     <a className={window.location.pathname === "/auth/logout" ? "nav-link active" : "nav-link"}
@@ -36,16 +38,14 @@ class Navbar extends Component {
                                         Log Out
                                     </a> 
                                     </li>
+:
                                     <li className="nav-item">
-                                    <a href={config.serverHost + "/auth/google"}
-                                        className={window.location.pathname === "/auth/logout" ? "nav-link active" : "nav-link"}>
-                                        Log In
-                                     </a>
+                                    <Link to="/Login" className={window.location.pathname === "/Login" ? "nav-link active" : "nav-link"}>
+                                    Login
+                               </Link>
                                 
-                                {/* <Link to="/Login" className={window.location.pathname === "/Login" ? "nav-link active" : "nav-link"}>
-                                Login
-                            </Link> */}
                             </li>
+                            }
                         </ul>
                     </div>
                 </nav>

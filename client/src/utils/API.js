@@ -14,6 +14,7 @@ export default {
   getStudent: function (id) {
     return axios.get("/api/students/" + id);
   },
+  
   // Deletes the student with the given id
   deleteStudent: function (id) {
     return axios.delete("/api/students/" + id);
