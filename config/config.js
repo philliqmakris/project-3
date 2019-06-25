@@ -1,2 +1,5 @@
-module.export = 
-"http://localhost:3000";
+/* const settings = {
+    serverHost: process.env.serverHost || "http://localhost:3001"
+}
+
+export default settings; */
