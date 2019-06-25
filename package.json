@@ -29,6 +29,7 @@
     "if-env": "^1.0.4",
     "materialize-css": "^1.0.0-rc.2",
     "mongoose": "^5.3.16",
+    "node-static": "^0.7.11",
     "passport": "^0.4.0",
     "passport-google-oauth": "^2.0.0",
     "path": "^0.12.7",

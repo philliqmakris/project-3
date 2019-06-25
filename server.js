@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const passport = require("passport");
+const http = require('http');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -18,8 +19,8 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Socket.io ----------------------------------------------
-const http = require('http').Server(app);
-const io = require('socket.io')(http);
+const server = http.createServer(app);
+const io = require('socket.io').listen(server);
 
 io.on('connection', (client) => {
   console.log('user connected');
@@ -54,6 +55,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/campsite",{ use
 
 
 // Start the API server
-http.listen(PORT, function() {
+server.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
