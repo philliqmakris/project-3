@@ -3,7 +3,11 @@ const express = require('express');
 const route = express.Router();
 const passport = require('passport');
 
-const serverHost = process.env.serverHost || "http://localhost:3000";
+const serverHost = process.env.serverHost || "http://localhost:";
+const PORT = process.env.PORT || 3000;
+
+console.log(serverHost);
+console.log(PORT);
 
 route.get(
 	'/google',
@@ -15,11 +19,11 @@ route.get(
 	'/google/redirect',
 	passport.authenticate('google', {
 		//failureRedirect: "http://localhost:3000"
-		failureRedirect: serverHost
+		failureRedirect: serverHost+PORT
 	}),
 	function(req, resp) {
 		//resp.redirect("http://localhost:3000/Profiles/"+ req.user.GoogleID);
-		resp.redirect(serverHost+"/Profiles/"+ req.user.GoogleID);
+		resp.redirect(serverHost+PORT+"/Profiles/"+ req.user.GoogleID);
 	}
 );
 
