@@ -5,7 +5,8 @@ const passport = require('passport');
 
 const serverHost = process.env.serverHost || "http://localhost:";
 const PORT = process.env.PORT || 3000;
-const testHost = process.env.serverHost || "http://localhost:3000"
+const testHost = process.env.HOST|| "http://localhost:3000"
+
 
 console.log(serverHost);
 console.log(PORT);
