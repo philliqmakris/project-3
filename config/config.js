@@ -1,3 +1,3 @@
 module.exports = { 
-    clientHost: process.env.clientHost || "http://localhost:3000",
+    clientHost: process.env.serverHost || "http://localhost:3000",
 }
