@@ -1,12 +1,11 @@
 import React, { Component } from "react";
+<<<<<<< HEAD
 import './style.css';
+=======
+import "./style.css"
+>>>>>>> master
 
 class Main extends Component{
-
-    componentDidMount(){
-        /* Hook for initializing stuff */
-    }
-    
     render(){
         return (
             <>
@@ -14,10 +13,14 @@ class Main extends Component{
                 <div className="black">
 
         <div className="container" id="welcomeTable">
-            <p className="welcome"><i class="fab fa-github black-text"> </i>Welcome to Campsite! Campsite is a student designed meeting space for bootcampers to
+            <p className="welcome">Welcome to Campsite! Campsite is a student designed meeting space for bootcampers to
                 interact and collaborate</p>
+<<<<<<< HEAD
                 
             <hr />>
+=======
+            <hr />
+>>>>>>> master
             <p className="welcome">Campsite offers mutiple ways for students to keep in touch, utilizing the chat feature as
                 well as audio and video conferencing.</p>
         </div>

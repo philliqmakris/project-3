@@ -1,10 +1,9 @@
 
-// const Config = require('../config/config');
 const express = require('express');
 const route = express.Router();
 const passport = require('passport');
+const config = require("../config/config")
 
-// console.log('Config',Config)
 
 route.get(
 	'/google',
@@ -15,17 +14,14 @@ route.get(
 route.get(
 	'/google/redirect',
 	passport.authenticate('google', {
-		failureRedirect: "http://localhost:3000"
+		failureRedirect: config.clientHost
 	}),
 	function(req, resp) {
-		console.log(req.user);
-		resp.redirect("http://localhost:3000/Profiles");
+		resp.redirect(config.clientHost + "/Profiles/"+ req.user.GoogleID);
 	}
 );
 
 route.get('/verify', (req, res) => {
-
-	console.log('verify',req)
 	if (req.user) {
 		console.log(req.user);
 	} else {
@@ -35,7 +31,7 @@ route.get('/verify', (req, res) => {
 
 route.get('/logout', (req, res) => {
 	req.logout();
-	res.redirect("http://localhost:3000");
+	res.redirect(config.clientHost);
 });
 
 module.exports = route;

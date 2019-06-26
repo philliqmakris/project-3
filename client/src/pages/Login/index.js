@@ -1,19 +1,49 @@
 import React, { Component } from "react";
-import Modal from '../../components/Modal';
+import Form from "../../components/Form/index";
+import config from "../../config/config"
+import "./style.css"
 
-class Login extends Component{
 
-    componentDidMount(){
-        /* Hook for initializing stuff */
+class Login extends Component {
+
+    state={
+        search:"",
+        classId:"",
+        isAuth:false,
+        classIdNotSucess:false
     }
+
+    handleInputChange = event => {
+        console.log('handleInputChange',event.target.value)
+        this.setState({ search: event.target.value });
+      };
     
-    render(){
+    handleFormSubmit=async (event)=>{
+        event.preventDefault();
+await this.setState({ classId:this.state.search });
+        if(config.batchId.includes(this.state.classId.trim())){ 
+            await this.setState({ isAuth:true,
+                classIdNotSucess:false });
+        } else{
+            await this.setState({ isAuth:false,
+                classIdNotSucess:true });
+        }
+    }
+
+    render() {
         return (
-            <div>
-                    <Modal />
-                {/* Login page components go here */}
+            //Login page components go here
+            <div className="jumbotron">
+              <div className="headerLogin" >
+                <h1 className="display-6  text-center">Campsite Authentication</h1>
+                </div> 
+                <Form handleFormSubmit={this.handleFormSubmit}
+                      handleInputChange={this.handleInputChange}
+                      isAuth={this.state.isAuth}
+                      classIdNotSucess={this.state.classIdNotSucess}
+                      />
             </div>
-        )
+        );
     }
 }
 

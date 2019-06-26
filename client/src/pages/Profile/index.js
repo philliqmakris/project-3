@@ -1,43 +1,49 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-import Container from "../../components/Container";
 import ProfileCard from "../../components/ProfileCard";
 import Sidenav from "../../components/Sidenav";
+<<<<<<< HEAD
 import SavedResults from "../../components/SavedResults";
 import config from "../../config/config"
 import Sidenav2 from "../../components/Sidenav2"
+=======
+>>>>>>> master
 
 
 class Profile extends Component {
   
   state = {
     stud:[],
+    loggedUser:[],
+    filterUser:[]
+
   };
 
    componentDidMount() {
     this.loadStudents();
-    this.verifyLogin();
-      
+    this.getUserDetails(); 
+    this.filterLoggedUser();     
+    }
+
+    getUserDetails=async ()=>{
+      const loggedInUserId = window.location.toString().split("/").pop().split('#')[0];
+      await API.getUserByGoogleId(loggedInUserId)
+      .then(async (res) =>{
+        await this.setState({ loggedUser: res.data })
+       
+
+      })
     }
   
      loadStudents = () => {  
       API.getStudents()
-        .then(res =>{
-          console.log('api',res.data)
-          this.setState({ stud: res.data })
+        .then(async (res) =>{
+          await this.setState({ stud: res.data })
+          await this.props.isAuthenticated(true)
         }
         )
         .catch(err => console.log(err));
     };
-verifyLogin=()=>{
-API.verifyUser()
-.then(res=>{
-  console.log('verifylogin',res);
-})
-  // {config.serverHost + "/auth/google}
-
-
-}
 
   deleteStudent = ({target}) => {
 const {dataset} =target;
@@ -46,19 +52,37 @@ const {dataset} =target;
       .catch(err => console.log(err));
   };
 
+  filterLoggedUser= async ()=>{
+   await this.getUserDetails();
+const userFilter =(this.state.loggedUser.map(userdetails=>userdetails.firstName +' '+ userdetails.lastName ));
+this.setState({ filterUser: userFilter[0].toLocaleLowerCase().trim() })
+  }
   
   render() {
+<<<<<<< HEAD
     return (
       
       <div className="d-flex flex-row">
                     <div className="d-flex flex-column align-self-center mr-5">
                          <Sidenav />
                          <Sidenav2 />   
+=======
+
+  return (
+      <div className="d-flex flex-row">
+                    <div className="d-flex flex-column align-self-center mr-5">
+                         <Sidenav loggedUserDetails={this.state.loggedUser}/>   
+>>>>>>> master
                      </div>
                      <div className="d-flex flex-column mt-5">
                         
                          <div className="row text-center mt-5" id="cardDiv">
-                           <ProfileCard results={this.state.stud} />
+                         
+                           <ProfileCard 
+                           results={this.state.stud.filter(
+                             (myfilter)=>
+                                myfilter.name.toLocaleLowerCase().trim()!==this.state.filterUser)} 
+                                />
 
 </div>
 </div>

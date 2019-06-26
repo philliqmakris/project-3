@@ -9,8 +9,11 @@ router.route("/")
 // Matches with "/api/user/:id"
 router
   .route("/:id")
-  .get(userController.findById)
+  // .get(userController.findById)
+  .get(userController.findByGoogleId)
   .put(userController.update)
   .delete(userController.remove);
+
+  
 
 module.exports = router;
