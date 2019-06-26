@@ -3,3 +3,15 @@ label{
     font-size: 20px;
     font-weight: bold
 }
+.errClass{
+    color: red;
+}
+
+body {
+    color: white;
+}
+
+#findButt {
+    padding-left: 20px;
+    padding-right: 20px;
+}

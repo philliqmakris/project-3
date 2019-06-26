@@ -9,7 +9,8 @@ class Login extends Component {
     state={
         search:"",
         classId:"",
-        isAuth:false
+        isAuth:false,
+        classIdNotSucess:false
     }
 
     handleInputChange = event => {
@@ -21,9 +22,11 @@ class Login extends Component {
         event.preventDefault();
 await this.setState({ classId:this.state.search });
         if(config.batchId.includes(this.state.classId.trim())){ 
-            await this.setState({ isAuth:true });
+            await this.setState({ isAuth:true,
+                classIdNotSucess:false });
         } else{
-            await this.setState({ isAuth:false });
+            await this.setState({ isAuth:false,
+                classIdNotSucess:true });
         }
     }
 
@@ -37,6 +40,7 @@ await this.setState({ classId:this.state.search });
                 <Form handleFormSubmit={this.handleFormSubmit}
                       handleInputChange={this.handleInputChange}
                       isAuth={this.state.isAuth}
+                      classIdNotSucess={this.state.classIdNotSucess}
                       />
             </div>
         );
