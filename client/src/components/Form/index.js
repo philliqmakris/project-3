@@ -36,7 +36,7 @@ render(){
                 <button type="submit" 
                 disabled={!this.props.isAuth}
                 className="btn btn-success">
-                <a href={config.serverHost + "/auth/google"}>Login</a> </button>
+                <a href={process.env.REACT_APP_API_URL + "/auth/google"}>Login</a> </button>
                 </div>
                 </div>
                 </div>

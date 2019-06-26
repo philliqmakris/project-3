@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./style.css"
 
+console.log(process.env.REACT_APP_API_URL);
+
 class Main extends Component{
     render(){
         return (

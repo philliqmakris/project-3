@@ -3,20 +3,15 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 const passport = require("passport");
 const http = require('http');
-const dotenv = require('dotenv');
-/* const result = dotenv.config();
+/* const dotenv = require('dotenv');
+const result = dotenv.config(); */
 
-if (result.error) {
-  throw result.error
-}
+console.log(process.env.NODE_ENV);
 
-console.log(result.parsed) */
+//console.log(process.env.REACT_APP_API_URl);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-
-//console.log("process.env:"+JSON.stringify(process.env.PORT));
-
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
