@@ -17,7 +17,7 @@ class Main extends Component{
         </div>
     </div>
 
-    <div className="container" id="staffTable">
+    {/* <div className="container" id="staffTable">
         <br />
         <h1 className="staffTitle"><u>Educational Staff</u></h1>
         <br />
@@ -55,7 +55,7 @@ class Main extends Component{
                         Kerstine</a></h2>
             </div>
         </div>
-    </div>
+    </div> */}
             </>
         )
     }

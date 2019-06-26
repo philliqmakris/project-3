@@ -6,3 +6,8 @@
     padding: 10px;
     color: black;
 }
+
+.jumbotron {
+    background-color: rgb(17, 17, 17);
+    color: white;
+}
