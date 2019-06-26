@@ -3,12 +3,6 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 const passport = require("passport");
 const http = require('http');
-/* const dotenv = require('dotenv');
-const result = dotenv.config(); */
-
-console.log(process.env.NODE_ENV);
-
-//console.log(process.env.REACT_APP_API_URl);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
