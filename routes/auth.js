@@ -14,10 +14,10 @@ route.get(
 route.get(
 	'/google/redirect',
 	passport.authenticate('google', {
-		failureRedirect: config.clientHost
+		failureRedirect: "http://localhost:3000"
 	}),
 	function(req, resp) {
-		resp.redirect(config.clientHost + "/Profiles/"+ req.user.GoogleID);
+		resp.redirect("http://localhost:3000" + "/Profiles/"+ req.user.GoogleID);
 	}
 );
 
@@ -31,7 +31,7 @@ route.get('/verify', (req, res) => {
 
 route.get('/logout', (req, res) => {
 	req.logout();
-	res.redirect(config.clientHost);
+	res.redirect("http://localhost:3000");
 });
 
 module.exports = route;
