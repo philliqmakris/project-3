@@ -28,14 +28,15 @@ class Form extends Component {
                                 <button type="button"
                                     disabled={this.props.isAuth}
                                     onClick={this.props.handleFormSubmit}
+                                    id="findButt"
                                     className="btn btn-success">
-                                    Authenticate</button>
+                                    Find</button>
                             </div>
                             <div className="col-2">
-                                <button type="submit"
+                                {/* <button type="submit"
                                     disabled={!this.props.isAuth}
                                     className="btn btn-success">
-                                    <a href={config.serverHost + "/auth/google"}>Login</a> </button>
+                                    <a href={config.serverHost + "/auth/google"}>Login</a> </button> */}
                             </div>
                         </div>
                     </div>
