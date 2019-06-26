@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-<<<<<<< HEAD
+ HEAD
 import './style.css';
-=======
+
 import "./style.css"
->>>>>>> master
+ master
 
 class Main extends Component{
     render(){
@@ -15,12 +15,8 @@ class Main extends Component{
         <div className="container" id="welcomeTable">
             <p className="welcome">Welcome to Campsite! Campsite is a student designed meeting space for bootcampers to
                 interact and collaborate</p>
-<<<<<<< HEAD
                 
             <hr />>
-=======
-            <hr />
->>>>>>> master
             <p className="welcome">Campsite offers mutiple ways for students to keep in touch, utilizing the chat feature as
                 well as audio and video conferencing.</p>
         </div>
