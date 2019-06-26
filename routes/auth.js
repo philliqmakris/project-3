@@ -1,7 +1,7 @@
 const express = require('express');
 const route = express.Router();
 const passport = require('passport');
-const config = require("../config/config")
+const config = require("../config/config");
 
 
 route.get(

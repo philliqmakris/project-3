@@ -3,6 +3,14 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 const passport = require("passport");
 const http = require('http');
+const dotenv = require('dotenv');
+/* const result = dotenv.config();
+
+if (result.error) {
+  throw result.error
+}
+
+console.log(result.parsed) */
 
 const app = express();
 const PORT = process.env.PORT || 3001;
