@@ -4,7 +4,7 @@ import config from "../../config/config";
 /* Socket.io */
 import openSocket from 'socket.io-client';
 
-const socket = openSocket(config.serverHost);
+const socket = openSocket(process.env.REACT_APP_API_URL);
 
 
 class Chat extends Component {
