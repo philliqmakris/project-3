@@ -35,7 +35,7 @@ await this.setState({ classId:this.state.search });
             //Login page components go here
             <div className="jumbotron">
               <div className="headerLogin" >
-                <h1 className="display-6  text-center">Campsite Authentication</h1>
+                <h1 className="display-6  text-center">Class ID</h1>
                 </div> 
                 <Form handleFormSubmit={this.handleFormSubmit}
                       handleInputChange={this.handleInputChange}
