@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import ProfileCard from "../../components/ProfileCard";
-import Sidenav from "../../components/sideNav";
+import Sidenav from "../../components/Sidenav";
 import Chat from "../../components/Chat";
 
 
