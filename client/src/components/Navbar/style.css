@@ -1,5 +1,6 @@
 body{
   font-family: 'Graduate', cursive;
+
 }
 nav.navbar.navbar-default {
   margin-bottom: 0;
@@ -26,8 +27,9 @@ nav.navbar.navbar-default {
   display:flex;
 }
 
-#login {
+#login, .nav-link {
   font-size: 25px;
   padding-left: 60px;
   
 }
+
