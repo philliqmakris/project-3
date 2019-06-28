@@ -33,9 +33,9 @@ class Form extends Component {
                             </div>
                             <div className={(!this.props.isAuth)? 'col-2 invisible':'col-2 visible'}>
                                 <button type="submit"
-                                className ={(!this.props.isAuth)? 'invisible':'visible'}
-                                    className="btn btn-success">
-                                    <a href={config.serverHost + "/auth/google"}>Login</a> </button>
+                                    className ={(!this.props.isAuth)? 'invisible btn btn-success':'visible btn btn-success'}>
+                                    <a href={config.serverHost + "/auth/google"}>Login</a> 
+                                </button>
                             </div>
                         </div>
                     </div>

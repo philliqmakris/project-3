@@ -16,14 +16,14 @@ class Navbar extends Component {
                         <img className="logo-img" src="https://commencement.uoregon.edu/sites/commencement2.uoregon.edu/files/guidebook-beaduck.png" alt="banner" />
                     </a>
           
-                    <div class="col-md-10">
+                    <div className="col-md-10">
                     <a className="navbar-brand" href="/">Campsite</a>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     </div>
                     <div className="collapse navbar-collapse" id="navbarNav">
-                        <div class="col">
+                        <div className="col">
                         <ul className="navbar-nav">
                            
                             {/* <li className="nav-item md-1">
