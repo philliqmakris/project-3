@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import config from "../../config/config"
 import "./style.css"
 
+console.log(config.serverHost);
+
 class Form extends Component {
 
     render() {
