@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import LoggedInUser from '../LoggedInUser';
 import './style.css';
@@ -35,3 +36,4 @@ class Sidenav extends Component{
 }
 
 export default Sidenav;
+

@@ -21,14 +21,14 @@ class Main extends Component {
                     </div>
                 </div>
 
-                <div className="container" id="staffTable">
-                    <br />
-                    <h1 className="staffTitle"><u>Educational Staff</u></h1>
-                    <br />
-                    <div className="row">
-                        <div className="col-md-8">
-                            <h2><u>Intructor</u>: <a className="todd" href="https://www.linkedin.com/in/tbehunin/"
-                                rel="noopener noreferrer" target="_blank">Todd
+    {/* <div className="container" id="staffTable">
+        <br />
+        <h1 className="staffTitle"><u>Educational Staff</u></h1>
+        <br />
+        <div className="row">
+            <div className="col-md-8">
+                <h2><u>Intructor</u>: <a className="todd" href="https://www.linkedin.com/in/tbehunin/" 
+                rel="noopener noreferrer" target="_blank">Todd
                         Behunin</a></h2>
                         </div>
 
@@ -57,9 +57,9 @@ class Main extends Component {
                         <div className="col-md-4">
                             <h2><u>TA</u>: <a className="ta" href="https://www.linkedin.com/in/greg-kerstine/" rel="noopener noreferrer" target="_blank">Greg
                         Kerstine</a></h2>
-                        </div>
-                    </div>
-                </div>
+            </div>
+        </div>
+    </div> */}
             </>
         )
     }

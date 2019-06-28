@@ -1,5 +1,32 @@
+/* WHY DOES THIS CSS EFFECT THE NAVBAR? */
+
 label{
     color: black;
     font-size: 20px;
     font-weight: bold
+}
+.errClass{
+    color: red;
+}
+
+body {
+    color: white;
+}
+
+#findButt {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.classId {
+    font-size: 30px;
+    color: rgb(230, 230, 230);
+}
+
+.visible{
+    visibility:visible;
+}
+
+.invisible{
+    visibility:hidden;
 }
