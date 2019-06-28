@@ -1,5 +1,5 @@
 
-import React, { Component } from "react";
+import React, { Component } from "./node_modules/react";
 import LoggedInUser from '../LoggedInUser';
 import './style.css';
 
