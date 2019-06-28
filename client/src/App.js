@@ -30,7 +30,7 @@ class App extends Component {
         <Wrapper>
         <Route exact path="/" component={Main} />
        
-        <Route exact path="/login" component={Login} />
+        <Route path="/login" component={Login} />
         
         
         <Route 
