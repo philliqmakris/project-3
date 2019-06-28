@@ -13,7 +13,7 @@ class Form extends Component {
                             <div className="col-2 ">
                                 <label htmlFor="classId">Class ID</label>
                             </div>
-                            <div className="col-4 ml-0 ">
+                            <div className={(this.props.isAuth)? 'col-4 ml-0 invisible':'col-4 ml-0 visible'}>
                                 <input
                                     disabled={this.props.isAuth}
                                     value={this.props.search}
@@ -24,19 +24,18 @@ class Form extends Component {
                                     placeholder="Class ID"
                                 />
                             </div>
-                            <div className="col-2">
+                            <div className={(this.props.isAuth)? 'col-2 invisible':'col-2 visible'}>
                                 <button type="button"
                                     disabled={this.props.isAuth}
                                     onClick={this.props.handleFormSubmit}
-                                    id="findButt"
-                                    className="btn btn-success">
-                                    Find</button>
+                                    className="btn btn-success">                                 
+                                    Authenticate </button>
                             </div>
-                            <div className="col-2">
-                                {/* <button type="submit"
-                                    disabled={!this.props.isAuth}
+                            <div className={(!this.props.isAuth)? 'col-2 invisible':'col-2 visible'}>
+                                <button type="submit"
+                                className ={(!this.props.isAuth)? 'invisible':'visible'}
                                     className="btn btn-success">
-                                    <a href={config.serverHost + "/auth/google"}>Login</a> </button> */}
+                                    <a href={config.serverHost + "/auth/google"}>Login</a> </button>
                             </div>
                         </div>
                     </div>

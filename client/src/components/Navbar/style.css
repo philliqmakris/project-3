@@ -27,8 +27,9 @@ nav.navbar.navbar-default {
   display:flex;
 }
 
-#login {
+#login, .nav-link {
   font-size: 25px;
   padding-left: 60px;
   
 }
+

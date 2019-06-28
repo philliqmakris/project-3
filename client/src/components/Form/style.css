@@ -11,7 +11,6 @@ label{
 
 body {
     color: white;
-    /* text-align: center; */
 }
 
 #findButt {
@@ -19,3 +18,15 @@ body {
     padding-right: 20px;
 }
 
+.classId {
+    font-size: 30px;
+    color: rgb(230, 230, 230);
+}
+
+.visible{
+    visibility:visible;
+}
+
+.invisible{
+    visibility:hidden;
+}
