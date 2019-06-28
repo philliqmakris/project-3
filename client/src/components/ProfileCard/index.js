@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-function ProfileCard(props) {
+const ProfileCard= (props)=> {
     return (
         <>
             {props.results.map(result => (

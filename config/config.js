@@ -1,3 +1,3 @@
 module.exports = { 
-    serverHost: process.env.serverHost || "http://localhost:3000",
+    serverHost: process.env.REACT_APP_API_URL || "http://localhost:3000",
 }

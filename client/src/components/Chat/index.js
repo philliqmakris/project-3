@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./style.css";
-import config from "../../config/config";
+//import config from "../../config/config";
 /* Socket.io */
 import openSocket from 'socket.io-client';
 

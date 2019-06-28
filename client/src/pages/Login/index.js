@@ -5,10 +5,11 @@ import "./style.css";
 
 class Login extends Component {
 
-    state = {
-        search: "",
-        classId: "",
-        isAuth: false
+    state={
+        search:"",
+        classId:"",
+        isAuth:false,
+        classIdNotSucess:false
     }
 
     handleInputChange = event => {
@@ -18,11 +19,13 @@ class Login extends Component {
 
     handleFormSubmit = async (event) => {
         event.preventDefault();
-        await this.setState({ classId: this.state.search });
-        if (config.batchId.includes(this.state.classId.trim())) {
-            await this.setState({ isAuth: true });
-        } else {
-            await this.setState({ isAuth: false });
+await this.setState({ classId:this.state.search });
+        if(config.batchId.includes(this.state.classId.trim())){ 
+            await this.setState({ isAuth:true,
+                classIdNotSucess:false });
+        } else{
+            await this.setState({ isAuth:false,
+                classIdNotSucess:true });
         }
     }
 
@@ -30,13 +33,14 @@ class Login extends Component {
         return (
             //Login page components go here
             <div className="jumbotron">
-                <div className="headerLogin" >
-                    <h1 className="display-6  text-center">Campsite Authentication</h1>
-                </div>
+              <div className="headerLogin" >
+                <h1 className="display-6  text-center"> Enter Class ID</h1>
+                </div> 
                 <Form handleFormSubmit={this.handleFormSubmit}
-                    handleInputChange={this.handleInputChange}
-                    isAuth={this.state.isAuth}
-                />
+                      handleInputChange={this.handleInputChange}
+                      isAuth={this.state.isAuth}
+                      classIdNotSucess={this.state.classIdNotSucess}
+                      />
             </div>
         );
     }
