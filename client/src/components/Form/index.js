@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import config from "../../config/config";
 import "./style.css"
 
-console.log(config.serverHost); 
+console.log(config.serverHost);
+console.log(process.env.NODE_ENV);
+console.log(process.env.REACT_APP_API_URL); 
 
 class Form extends Component {
 
