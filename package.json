@@ -23,6 +23,8 @@
     "nodemon": "^1.18.7"
   },
   "dependencies": {
+    "@webassemblyjs/ast": "^1.8.5",
+    "@webassemblyjs/helper-buffer": "^1.8.5",
     "axios": "^0.18.0",
     "bootstrap-social": "^5.1.1",
     "dotenv": "^8.0.0",
