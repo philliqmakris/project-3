@@ -41,7 +41,7 @@ class Navbar extends Component {
                             {(this.props.isAuthenticate)?
                             <li className="nav-item ">
 
-                                    <a className={window.location.pathname === "/auth/logout" ? "nav-link active" : "nav-link"}
+                                    <a className= {window.location.pathname === "/auth/logout" ? "nav-link active" : "nav-link" }
                                         href={config.serverHost + "/auth/logout"}>
                                         Log Out
                                     </a> 
