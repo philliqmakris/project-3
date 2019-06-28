@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Form from "../../components/Form/index";
+import Form from "../../components/Form";
 import config from "../../config/config";
 import "./style.css";
 
