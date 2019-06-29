@@ -29,6 +29,7 @@ class Sidenav extends Component{
                 <div id="main">
                     <button className="openbtn" id="hamburger" onClick={openNav}><i className="fas fa-bars"></i></button> 
                 </div>
+                
             </>
         );
     }

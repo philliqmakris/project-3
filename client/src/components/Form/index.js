@@ -10,7 +10,7 @@ class Form extends Component {
                 <form>
                     <div className="form-group">
                         <div className="row">
-                            <div className="col-2 ">
+                            <div className="col-4 ">
                                 <label htmlFor="classId">Class ID</label>
                             </div>
                             <div className={(this.props.isAuth)? 'col-4 ml-0 invisible':'col-4 ml-0 visible'}>
@@ -24,20 +24,27 @@ class Form extends Component {
                                     placeholder="Class ID"
                                 />
                             </div>
-                            <div className={(this.props.isAuth)? 'col-2 invisible':'col-2 visible'}>
+                            <div className={(this.props.isAuth)? 'col-4 invisible':'col-2 visible'}>
                                 <button type="button"
                                     disabled={this.props.isAuth}
                                     onClick={this.props.handleFormSubmit}
                                     className="btn btn-success">                                 
-                                    Authenticate </button>
+                                    Go </button>
                             </div>
+                            
+                                
+                            </div>
+                            {/* <div class="row">
                             <div className={(!this.props.isAuth)? 'col-2 invisible':'col-2 visible'}>
-                                <button type="submit"
+                                <button id="loginButt" type="submit"
                                 className ={(!this.props.isAuth)? 'invisible':'visible'}
                                     className="btn btn-success">
                                     <a href={config.serverHost + "/auth/google"}>Login</a> </button>
                             </div>
-                        </div>
+                            
+                            
+                            
+                            </div> */}
                     </div>
                 </form>
                 {(this.props.classIdNotSucess) && <div className="errClass text-align-center">

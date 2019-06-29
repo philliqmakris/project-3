@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import ProfileCard from "../../components/ProfileCard";
 import Sidenav from "../../components/Sidenav";
+import "./style.css"
 
 
 class Profile extends Component {
