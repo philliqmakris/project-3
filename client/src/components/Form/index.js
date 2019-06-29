@@ -51,5 +51,4 @@ class Form extends Component {
         );
     }
 }
-//<a href={(this.props.isAuth)? "/auth/google":""}>
 export default Form;
