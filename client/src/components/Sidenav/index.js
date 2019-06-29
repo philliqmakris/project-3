@@ -1,6 +1,7 @@
 
 import React, { Component } from "react";
 import LoggedInUser from '../LoggedInUser';
+import Chat from '../Chat';
 import './style.css';
 
 
@@ -24,6 +25,7 @@ class Sidenav extends Component{
                 <div id="mySidebar" className="sidebar align-content-center mr-5">
                     <button className="closebtn" onClick={closeNav}>&times;</button>
                     { <LoggedInUser loggedUserDetails={this.props.loggedUserDetails}/>}
+                    <Chat userInfo={this.props.loggedUserDetails} />
                 </div>
 
                 <div id="main">
