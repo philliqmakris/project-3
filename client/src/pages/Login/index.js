@@ -23,6 +23,7 @@ await this.setState({ classId:this.state.search });
         if(config.batchId.includes(this.state.classId.trim())){ 
             await this.setState({ isAuth:true,
                 classIdNotSucess:false });
+                    {window.location=config.serverHost + "/auth/google"}
         } else{
             await this.setState({ isAuth:false,
                 classIdNotSucess:true });
