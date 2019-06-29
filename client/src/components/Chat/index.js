@@ -55,15 +55,9 @@ class Chat extends Component {
         this.setState({
             recieve_msg: [...this.state.recieve_msg, msg]
         })
-
-        console.log(this.state.recieve_msg);
     }
 
     render() {
-
-        console.log(typeof this.props.userInfo[0]);
-        console.log('chat props: ', this.props.userInfo[0]);
-        console.log('chat state: ', this.state.name);
 
         return (
             <div className="container chatContainer">

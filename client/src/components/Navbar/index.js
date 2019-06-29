@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import "./style.css";
-import config from "../../config/config"
 
 class Navbar extends Component {
     state = {
@@ -25,19 +24,6 @@ class Navbar extends Component {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <div className="col">
                         <ul className="navbar-nav">
-                           
-                            {/* <li className="nav-item md-1">
-                                <Link to="/" className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
-                                     Home |
-                            </Link>
-                            </li> */}
-                        
-                            
-                            {/* <li className="nav-item">
-                                <Link to="/Register" className={window.location.pathname === "/Register" ? "nav-link active" : "nav-link"}>
-                                    Register
-                            </Link>
-                            </li> */}
                             {(this.props.isAuthenticate)?
                             <li className="nav-item ">
 
