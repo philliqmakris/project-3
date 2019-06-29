@@ -42,7 +42,7 @@ class Navbar extends Component {
                             <li className="nav-item ">
 
                                     <a className= {window.location.pathname === "/auth/logout" ? "nav-link active" : "nav-link" }
-                                        href={config.serverHost + "/auth/logout"}>
+                                        href={process.env.REACT_APP_API_URL + "/auth/logout"}>
                                         Log Out
                                     </a> 
                                     </li>
