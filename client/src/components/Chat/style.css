@@ -50,6 +50,7 @@
 {
     overflow-y: scroll;
     height: 250px;
+    background-color: white;
 }
 
 ::-webkit-scrollbar-track

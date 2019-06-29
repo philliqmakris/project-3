@@ -51,6 +51,19 @@ class Chat extends Component {
 
     }
 
+    handleKeyDown = (e) => {
+        if ((e.key === 'Enter') && (this.state.msg !== '') ) {
+            this.setState({
+                name: this.props.userInfo[0].firstName
+            });
+    
+            socket.emit('chat message', this.state.name+': '+this.state.msg);
+            this.setState({
+                msg: ''
+            });
+          }
+    }
+
     addMsg = (msg) => {
         this.setState({
             recieve_msg: [...this.state.recieve_msg, msg]
@@ -72,7 +85,7 @@ class Chat extends Component {
                         </div>
                         <div className="panel-footer">
                             <div className="input-group">
-                                <input id="btn-input" type="text" name="message" className="form-control input-sm" onChange={this.handleInputChange} value={this.state.msg} placeholder="Type your message here..." />
+                                <input id="btn-input" type="text" name="message" className="form-control input-sm" onChange={this.handleInputChange} value={this.state.msg} onKeyDown={this.handleKeyDown} placeholder="Message" />
                                 <span className="input-group-btn">
                                     <button className="btn btn-warning btn-sm" id="btn-chat" onClick={this.handleClick}>
                                         Send</button>
