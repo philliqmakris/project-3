@@ -1,8 +1,8 @@
 const express = require("express");
-
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const passport = require("passport");
+const http = require('http');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -14,6 +14,24 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+
+// Socket.io ----------------------------------------------
+const server = http.createServer(app);
+const io = require('socket.io').listen(server);
+
+io.on('connection', (client) => {
+  console.log('user connected');
+
+  client.on('disconnect', function(){
+    console.log('user disconnected');
+  });
+
+  client.on('chat message', function(msg){
+    console.log(msg);
+    io.emit('chat message', msg);
+  });
+
+});
 
 //Passport Strategy
 require("./client/src/Passport/passport")(passport);
@@ -30,11 +48,14 @@ app.use((req, resp, next) => {
 // Add routes, both API and view
 app.use(routes);
 
-// Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/campsite",{ useNewUrlParser: true }) ;
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
+// Connect to the Mongo DB
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/campsite",{ useNewUrlParser: true });
 
 // Start the API server
-app.listen(PORT, function() {
+server.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });

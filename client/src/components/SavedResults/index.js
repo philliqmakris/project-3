@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import "./style.css";
 
 function SavedResults (props){
@@ -12,7 +12,7 @@ function SavedResults (props){
         <li key={result._id} 
         className="list-group-item collection">
         
-         <a href={result.urlGithub}  target="_blank" >
+         <a href={result.urlGithub}  target="_blank" rel="noopener noreferrer" >
          <button type="submit" className="btn btn-info mr-2 float-right">
          view
         </button>

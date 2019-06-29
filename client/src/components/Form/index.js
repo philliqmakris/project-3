@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import config from "../../config/config"
+import config from "../../config/config";
 import "./style.css"
+
+console.log(config.serverHost);
+console.log(process.env.NODE_ENV);
+console.log(process.env.REACT_APP_API_URL); 
 
 class Form extends Component {
 
@@ -36,10 +40,11 @@ class Form extends Component {
                             </div>
                             {/* <div class="row">
                             <div className={(!this.props.isAuth)? 'col-2 invisible':'col-2 visible'}>
-                                <button id="loginButt" type="submit"
-                                className ={(!this.props.isAuth)? 'invisible':'visible'}
-                                    className="btn btn-success">
-                                    <a href={config.serverHost + "/auth/google"}>Login</a> </button>
+                                <button type="submit"
+                                    className ={(!this.props.isAuth)? 'invisible btn btn-success':'visible btn btn-success'}>
+                                    <a href={process.env.REACT_APP_API_URL + "/auth/google"}>Login</a> 
+                                </button>
+
                             </div>
                             
                             
@@ -54,5 +59,4 @@ class Form extends Component {
         );
     }
 }
-//<a href={(this.props.isAuth)? "/auth/google":""}>
 export default Form;
