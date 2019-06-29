@@ -55,7 +55,7 @@ render() {
 
   return (
     <div className="text-right">
-      <Chat />
+      <Chat userInfo = {this.state.loggedUser} />
     <div className="d-flex flex-row">
       <div className="d-flex flex-column align-self-center mr-5">
         <Sidenav loggedUserDetails={this.state.loggedUser} />

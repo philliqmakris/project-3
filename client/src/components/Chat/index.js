@@ -17,6 +17,14 @@ class Chat extends Component {
     componentDidMount() {
 
         socket.on('chat message', (msg) => { this.addMsg(msg) });
+
+        if(typeof this.props.userInfo[0] !== 'undefined'){
+            
+                this.setState({
+                    name: this.props.userInfo[0].firstName
+                });
+        }
+
     }
 
     handleInputChange = event => {
@@ -25,14 +33,18 @@ class Chat extends Component {
 
         // Updating the input's state
         this.setState({
+            name: this.props.userInfo[0].firstName,
             msg: value
         });
     };
 
     handleClick = () => {
 
-        //console.log(this.state.msg);
-        socket.emit('chat message', this.state.msg);
+        this.setState({
+            name: this.props.userInfo[0].firstName
+        });
+
+        socket.emit('chat message', this.state.name+': '+this.state.msg);
         this.setState({
             msg: ''
         });
@@ -49,6 +61,9 @@ class Chat extends Component {
 
     render() {
 
+        console.log(typeof this.props.userInfo[0]);
+        console.log('chat props: ', this.props.userInfo[0]);
+        console.log('chat state: ', this.state.name);
 
         return (
             <div className="container chatContainer">
@@ -61,8 +76,8 @@ class Chat extends Component {
                     <div className="card card-body">
                         <div className="panel-body">
                             <ul className="chat text-left">
-                                {this.state.recieve_msg.map(item => (
-                                    <li key={item}>{item}</li>
+                                {this.state.recieve_msg.map((item, idx) => (
+                                    <li key={`${idx}-${item}`}>{item}</li>
                                 ))}
                             </ul>
                         </div>

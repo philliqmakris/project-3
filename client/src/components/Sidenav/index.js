@@ -19,7 +19,7 @@ function openNav() {
 
 class Sidenav extends Component{
     render(){
-        console.log(this.props.loggedUserDetails);
+        //console.log(this.props.loggedUserDetails['0']);
         return (
             <>
                 <div id="mySidebar" className="sidebar align-content-center mr-5">
