@@ -3,8 +3,7 @@ const db = require("../models");
 
 // This file empties the Students collection and inserts the student below
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password1@ds125126.mlab.com:25126/heroku_flnrgwqg",{ useNewUrlParser: true }) ;
-
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/campsite",{ useNewUrlParser: true }) ;
 
 
 const studentSeed = [
