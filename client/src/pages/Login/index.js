@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import Form from "../../components/Form/index";
-import config from "../../config/config"
-import "./style.css"
-
+import Form from "../../components/Form";
+import config from "../../config/config";
+import "./style.css";
 
 class Login extends Component {
 
@@ -14,11 +13,11 @@ class Login extends Component {
     }
 
     handleInputChange = event => {
-        console.log('handleInputChange',event.target.value)
+        console.log('handleInputChange', event.target.value)
         this.setState({ search: event.target.value });
-      };
-    
-    handleFormSubmit=async (event)=>{
+    };
+
+    handleFormSubmit = async (event) => {
         event.preventDefault();
 await this.setState({ classId:this.state.search });
         if(config.batchId.includes(this.state.classId.trim())){ 

@@ -1,8 +1,7 @@
-
 const express = require('express');
 const route = express.Router();
 const passport = require('passport');
-const config = require("../config/config")
+const config = require("../config/config");
 
 
 route.get(
@@ -14,10 +13,10 @@ route.get(
 route.get(
 	'/google/redirect',
 	passport.authenticate('google', {
-		failureRedirect: config.clientHost
+		failureRedirect: config.serverHost
 	}),
 	function(req, resp) {
-		resp.redirect(config.clientHost + "/Profiles/"+ req.user.GoogleID);
+		resp.redirect(config.serverHost + "/Profiles/"+ req.user.GoogleID);
 	}
 );
 
@@ -32,7 +31,7 @@ route.get('/verify', (req, res) => {
 route.get('/logout', (req, res) => {
 	console.log("req",req);
 	req.logout();
-	res.redirect(config.clientHost);
+	res.redirect(config.serverHost);
 });
 
 module.exports = route;
