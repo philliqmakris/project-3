@@ -1,10 +1,10 @@
-.nav{
+/* .nav{
   font-family: 'Graduate', cursive;
-  position: fixed;
-  z-index: 1;
+  position: fixed !important;
+  z-index: 1 !important;
   top: 0;
   width: 100vh;
-}
+} */
 nav.navbar.navbar-default {
   margin-bottom: 0;
 }
@@ -26,13 +26,13 @@ nav.navbar.navbar-default {
   margin-left: 0px;
 }
 
-/* .navbar{
+.navbar{
   position: fixed;
   z-index: 1;
   top: 0;
-  width: 100vh;
+  width: 100%;
   display:flex;
-} */
+}
 
 #login, .nav-link {
   font-size: 20px;
