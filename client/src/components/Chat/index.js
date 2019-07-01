@@ -75,7 +75,7 @@ class Chat extends Component {
         return (
             <div className="container chatContainer"> 
                 <div className="" id="collapseExample">
-                    <div className="card card-body">
+                    <div className="card card-body" id="chatCard">
                         <div className="panel-body">
                             <ul className="chat text-left">
                                 {this.state.recieve_msg.map((item, idx) => (

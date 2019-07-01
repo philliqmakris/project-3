@@ -23,7 +23,9 @@ class Sidenav extends Component{
         return (
             <>
                 <div id="mySidebar" className="sidebar align-content-center mr-5">
-                    <button className="closebtn" onClick={closeNav}>&times;</button>
+                    <button style={{"backgroundColor": "rgb(18, 68, 36)", "border":"0px"}} className="closebtn" onClick={closeNav}>
+                        <i className="fas fa-times"></i>
+                    </button>
                     { <LoggedInUser loggedUserDetails={this.props.loggedUserDetails}/>}
                     <Chat userInfo={this.props.loggedUserDetails} />
                 </div>
