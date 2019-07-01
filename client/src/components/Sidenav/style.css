@@ -12,6 +12,13 @@
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.25s; /* 0.25 second transition effect to slide in the sidebar */
   }
+
+#mySidebar {
+  box-shadow: 10px 10px 5px grey;
+  border-width: 2px 0px 0px 0px;
+  border-style: inset;
+  border-color: rgb(201, 201, 0);
+}
   
   /* The sidebar links */
   .sidebar a {
