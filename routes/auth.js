@@ -13,10 +13,10 @@ route.get(
 route.get(
 	'/google/redirect',
 	passport.authenticate('google', {
-		failureRedirect: config.serverHost
+		failureRedirect: process.env.REACT_APP_API_URL
 	}),
 	function(req, resp) {
-		resp.redirect(config.serverHost + "/Profiles/"+ req.user.GoogleID);
+		resp.redirect(process.env.REACT_APP_API_URL + "/Profiles/"+ req.user.GoogleID);
 	}
 );
 
@@ -31,7 +31,7 @@ route.get('/verify', (req, res) => {
 route.get('/logout', (req, res) => {
 	console.log("req",req);
 	req.logout();
-	res.redirect(config.serverHost);
+	res.redirect(process.env.REACT_APP_API_URL);
 });
 
 module.exports = route;
