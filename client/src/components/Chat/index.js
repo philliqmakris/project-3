@@ -10,6 +10,7 @@ class Chat extends Component {
 
     state = {
         name: '',
+        lastName: '',
         msg: '',
         recieve_msg: []
     }
@@ -84,8 +85,7 @@ class Chat extends Component {
                         <div className="panel-body">
                             <ul className="chat text-left">
                                 {this.state.recieve_msg.map((item, idx) => (
-                                    <li style={(this.state.name === this.props.userInfo[0].firstName)?{"backgroundColor":"red"}:{"backgroundColor":"yellow"}}
-                                     key={`${idx}-${item}`}>{item}</li>
+                                    <li key={`${idx}-${item}`}>{item}</li>
                                 ))}
                             </ul>
                         </div>
