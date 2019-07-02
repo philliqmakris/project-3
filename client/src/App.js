@@ -26,7 +26,9 @@ class App extends Component {
   return (
     <Router>
       <>
+      
         <Navbar  isAuthenticate={this.state.isAuthenticate} />
+        
         <Wrapper>
         <Route exact path="/" component={Main} />
        
@@ -41,6 +43,7 @@ class App extends Component {
 
         <Route exact path="/register" component={Register} />
         </Wrapper>
+        
         <Footer />
       </>
     </Router>

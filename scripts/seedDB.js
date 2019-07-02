@@ -20,6 +20,7 @@ const studentSeed = [
  {
    name: "Nash McDonald",
    urlImage:"https://avatars2.githubusercontent.com/u/20845201?s=460&v=4",
+   urlLinkedIn:"https://www.linkedin.com/in/nash-mcdonald/",
    urlGithub: "https://github.com/nashbrowns",
    batchId:'OREPOR201901FSF3',
    description:
@@ -29,6 +30,7 @@ const studentSeed = [
  {
    name: "Phillip Makris",
    urlImage:"https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/43509330_1713177855472231_1722977528664031232_n.jpg?_nc_cat=109&_nc_oc=AQku6HI9mHZ1YB3ZTt_lTAaLB1GIN6QUN_ywClzk8gTzuOYnVFroMnEyWV0rx2tpY9Y&_nc_ht=scontent-lax3-1.xx&oh=2cdf7759afb9f08b559c65d12e54a504&oe=5D7BDF74",
+   urlLinkedIn:"https://www.linkedin.com/in/phillip-makris-bb8ba1177/",
    urlGithub: "https://github.com/philliqmakris",
    batchId:'OREPOR201901FSF3',
    description:
@@ -38,6 +40,7 @@ const studentSeed = [
  {
    name: "Todd Behunin",
    urlImage:"https://avatars0.githubusercontent.com/u/796147?s=460&v=4",
+   urlLinkedIn:"https://www.linkedin.com/in/tbehunin/",
    urlGithub: "https://github.com/tbehunin",
    batchId:'OREPOR201901FSF3',
    description:
@@ -48,6 +51,7 @@ const studentSeed = [
  {
    name: "Travis Williamson",
    urlImage:"https://avatars0.githubusercontent.com/u/45703142?s=460&v=4",
+   urlLinkedIn:"",
    urlGithub: "https://github.com/TravisWadeWilliamson",
    batchId:'OREPOR201901FSF3',
    description:
@@ -58,6 +62,7 @@ const studentSeed = [
  {
    name: "Ryan Carmody",
    urlImage:"https://avatars1.githubusercontent.com/u/43544203?s=460&v=4",
+   urlLinkedIn:"https://www.linkedin.com/in/ryan-carmody/",
    urlGithub: "https://github.com/rlcarmody",
    batchId:'OREPOR201901FSF3',
    description:
@@ -68,6 +73,7 @@ const studentSeed = [
  {
    name: "Robert J. Paruch",
    urlImage:"https://avatars1.githubusercontent.com/u/44997807?s=460&v=4",
+   urlLinkedIn:"https://www.linkedin.com/in/robertjparuch/",
    urlGithub: "https://github.com/robjpar",
    batchId:'OREPOR201901FSF3',
    description:
@@ -78,6 +84,7 @@ const studentSeed = [
  {
    name: "Jean-Paul Deshaies",
    urlImage:"https://avatars1.githubusercontent.com/u/28058841?s=460&v=4",
+   urlLinkedIn:"https://www.linkedin.com/in/jean-paul-deshaies-a08068b/",
    urlGithub: "https://github.com/jdeshaies1982",
    batchId:'OREPOR201901FSF3',
    description:
@@ -88,6 +95,7 @@ const studentSeed = [
  {
    name: "David LiaBraaten ",
    urlImage:"https://avatars3.githubusercontent.com/u/46392401?s=460&v=4",
+   urlLinkedIn:"https://www.linkedin.com/in/david-liabraaten-22aa7a177/",
    urlGithub: "https://github.com/verbash",
    batchId:'OREPOR201901FSF3',
    description:
@@ -98,6 +106,7 @@ const studentSeed = [
  {
    name: "Hoang Le",
    urlImage:"https://avatars1.githubusercontent.com/u/38028938?s=460&v=4",
+   urlLinkedIn:"https://www.linkedin.com/in/hoang-le-20b79a177/",
    urlGithub: "https://github.com/hoangle4",
    batchId:'OREPOR201901FSF3',
    description:
@@ -108,6 +117,7 @@ const studentSeed = [
  {
    name: "Patrick Gonzalez",
    urlImage:"https://avatars0.githubusercontent.com/u/46695956?s=460&v=4",
+   urlLinkedIn:"",
    urlGithub: "https://github.com/pgonzalez003",
    batchId:'OREPOR201901FSF3',
    description:
@@ -118,6 +128,7 @@ const studentSeed = [
  {
    name: "Bo Carlson",
    urlImage:"https://avatars1.githubusercontent.com/u/521958?s=460&v=4",
+   urlLinkedIn:"https://www.linkedin.com/in/bocarlsonpdx/",
    urlGithub: "https://github.com/bocarlson",
    batchId:'OREPOR201901FSF3',
    description:
@@ -129,6 +140,7 @@ const studentSeed = [
  {
    name: "Tyler Jeffe", 
    urlImage:"https://avatars1.githubusercontent.com/u/45647344?s=460&v=4",
+   urlLinkedIn:"https://www.linkedin.com/in/tyler-jeffe-325330176/",
    urlGithub: "https://github.com/tylerjeffe",
    batchId:'OREPOR201901FSF3',
    description:
