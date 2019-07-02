@@ -12,20 +12,16 @@ const ProfileCard= (props)=> {
                             <div className="card-header">{result.name}</div>
                             <ul className="list-group list-group-flush">
                                 {/* <li className="list-group-item">{result.description}</li> */}
-                                <li className="list-group-item">
+                                <li className="list-group-item text-center">
                                     <a className="icons mb-2" href={result.urlGithub} target="_blank" rel="noopener noreferrer">
                                         <i className="fab fa-github"></i>
                                     </a>
                                     <a className="icons mb-2" href={result.urlLinkedIn} target="_blank" rel="noopener noreferrer">
                                         <i className="fab fa-linkedin"></i>
-                                    </a>
+                                    </a> 
                                     <a className="icons mb-2" href="https://arunav1101.github.io/learnVChat" target="_blank" rel="noopener noreferrer">
                                         <i className="fas fa-video"></i>
                                     </a>
-                                    {/* {Need to put the chat link} */}
-                                    <a className="icons mb-2" href="https://myvcs.herokuapp.com/" target="_blank" rel="noopener noreferrer" >
-                                        <i className="fab fa-rocketchat"></i>
-                                    </a> 
                                 </li>
 
                             </ul>

@@ -7,13 +7,22 @@
     color: black;
 }
 
+#authJumbo {
+    position: relative;
+    top: 60px;
+}
+
 .jumbotron {
     background-color: rgb(17, 17, 17);
-    color: white;
+    color: white; 
 }
 
 .display-6 {
-    color: white;
+    color: white !important;
     margin-top: 0px;
+}
+
+label {
+    color: white;
 }
 

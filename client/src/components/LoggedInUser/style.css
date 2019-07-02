@@ -8,6 +8,13 @@
     border-radius: 60px;
 }
 
+.card{
+    border-radius: 15px;
+}
+.card-body{
+    border-radius: 15px;
+}
+
 .card-header ,.list-group-item{
     color:black;
     font-size:1rem;

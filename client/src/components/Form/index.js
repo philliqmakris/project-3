@@ -13,9 +13,9 @@ class Form extends Component {
             <div className="container">
                 <form>
                     <div className="form-group">
-                        <div className="row">
+                        <div className="row align-content-center">
                             <div className="col-4 ">
-                                <label htmlFor="classId">Class ID</label>
+                                {/* <label htmlFor="classId">Class ID</label> */}
                             </div>
                             <div className={(this.props.isAuth)? 'col-4 ml-0 invisible':'col-4 ml-0 visible'}>
                                 <input
@@ -38,18 +38,6 @@ class Form extends Component {
                             
                                 
                             </div>
-                            {/* <div class="row">
-                            <div className={(!this.props.isAuth)? 'col-2 invisible':'col-2 visible'}>
-                                <button type="submit"
-                                    className ={(!this.props.isAuth)? 'invisible btn btn-success':'visible btn btn-success'}>
-                                    <a href={process.env.REACT_APP_API_URL + "/auth/google"}>Login</a> 
-                                </button>
-
-                            </div>
-                            
-                            
-                            
-                            </div> */}
                     </div>
                 </form>
                 {(this.props.classIdNotSucess) && <div className="errClass text-align-center">
