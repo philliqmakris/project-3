@@ -29,6 +29,7 @@ route.get('/verify', (req, res) => {
 });
 
 route.get('/logout', (req, res) => {
+	console.log("req",req);
 	req.logout();
 	res.redirect(config.serverHost);
 });

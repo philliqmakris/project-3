@@ -23,6 +23,14 @@
   color: #61dafb;
 }
 
+.card {
+  font-family: 'Karla', sans-serif;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.824);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

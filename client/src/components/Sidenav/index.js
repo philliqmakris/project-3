@@ -1,6 +1,7 @@
 
 import React, { Component } from "react";
 import LoggedInUser from '../LoggedInUser';
+import Chat from '../Chat';
 import './style.css';
 
 
@@ -12,8 +13,8 @@ function closeNav() {
 
 /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
 function openNav() {
-    document.getElementById("mySidebar").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
+    document.getElementById("mySidebar").style.width = "40vh";
+    document.getElementById("main").style.marginLeft = "40vh";
     document.getElementById("hamburger").style.display = "none";
   }
 
@@ -22,13 +23,17 @@ class Sidenav extends Component{
         return (
             <>
                 <div id="mySidebar" className="sidebar align-content-center mr-5">
-                    <button className="closebtn" onClick={closeNav}>&times;</button>
+                    <button style={{"backgroundColor": "rgb(18, 68, 36)", "border":"0px"}} className="closebtn" onClick={closeNav}>
+                        <i className="fas fa-times"></i>
+                    </button>
                     { <LoggedInUser loggedUserDetails={this.props.loggedUserDetails}/>}
+                    <Chat userInfo={this.props.loggedUserDetails} />
                 </div>
 
                 <div id="main">
                     <button className="openbtn" id="hamburger" onClick={openNav}><i className="fas fa-bars"></i></button> 
                 </div>
+                
             </>
         );
     }

@@ -9,7 +9,7 @@ function LoggedInUser(props) {
                     <div className="card ml-1 mr-1 text-center bg-light">
                         <div className="card-body" >
                             <img className="mb-2" src={result.photo} alt={result.name} />
-                            <div className="card-header">{result.firstName.toUpperCase()} {result.lastName.toUpperCase()}
+                            <div className="card-header text-center">{result.firstName.toUpperCase()} {result.lastName.toUpperCase()}
                             </div>
                         </div>
                     </div>
