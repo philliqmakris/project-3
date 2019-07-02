@@ -74,7 +74,12 @@ class Chat extends Component {
 
         return (
             <div className="container chatContainer"> 
-                <div className="" id="collapseExample">
+
+                <button className="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Chat
+                </button>
+
+                <div className="collapse" id="collapseExample">
                     <div className="card card-body" id="chatCard">
                         <div className="panel-body">
                             <ul className="chat text-left">
@@ -87,7 +92,7 @@ class Chat extends Component {
                             <div className="input-group">
                                 <input id="btn-input" type="text" name="message" className="form-control input-sm" onChange={this.handleInputChange} value={this.state.msg} onKeyDown={this.handleKeyDown} placeholder="Message" />
                                 <span className="input-group-btn">
-                                    <button className="btn btn-warning btn-sm" id="btn-chat" onClick={this.handleClick}>
+                                    <button className="btn btn-warning btn-md" id="btn-chat" onClick={this.handleClick}>
                                         Send</button>
                                 </span>
                             </div>

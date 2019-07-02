@@ -1,5 +1,5 @@
 #cardDiv .card{
-    height: 250px !important;
+    height: 260px !important;
     width:200px !important;
     font-size: 10px;
 } img{
@@ -9,9 +9,6 @@
 }
 
 .card{
-    border-radius: 15px;
-}
-.card-body{
     border-radius: 15px;
 }
 
