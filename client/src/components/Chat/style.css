@@ -24,7 +24,7 @@
 .panel-body
 {
     overflow-y: scroll;
-    height: 250px;
+    height: 200px;
     background-color: white;
 }
 
